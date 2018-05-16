@@ -22,15 +22,11 @@
        	 <property name="suffix" value=".jsp"></property>
        	 <property name="order" value="1"/>
         </bean>	 
-        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-       	 <property name="prefix" value="/user/"></property>
-       	 <property name="suffix" value=".jsp"></property>
-       	 <property name="order" value="2"/>
-        </bean>	 
+        
         
 		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 			<property name="driverClassName" value="com.mysql.jdbc.Driver"> </property>
-			<property name="url" value="jdbc:mysql://localhost:3306/javawebshopdatabase?characterEncoding=utf8"></property>
+			<property name="url" value="jdbc:mysql://localhost:3306/database?characterEncoding=utf8"></property>
 			<property name="username" value="root"></property>
 			<property name="password" value=""></property>
 		</bean>
@@ -49,14 +45,14 @@
 			</property>
 			 <property name="mappingResources">
                <list>
-                  <value>com/sky/Bean/Admin.hbm.xml</value>
+                 <!--  <value>com/sky/Bean/Admin.hbm.xml</value>
                   <value>com/sky/Bean/Person.hbm.xml</value>
                   <value>com/sky/Bean/Users.hbm.xml</value>
                   <value>com/sky/Bean/Address.hbm.xml</value>
                   <value>com/sky/Bean/Orders.hbm.xml</value>
                   <value>com/sky/Bean/Food.hbm.xml</value>
                   <value>com/sky/Bean/FoodType.hbm.xml</value>
-                  <value>com/sky/Bean/OrderDetail.hbm.xml</value>
+                  <value>com/sky/Bean/OrderDetail.hbm.xml</value>-->
                </list>
             </property>
 		</bean>
@@ -69,14 +65,14 @@
 			<property name="maxUploadSize" value="1000000"/>
         </bean>
         <!-- 拦截器配置 -->
-		<mvc:interceptors>
+		<!-- <mvc:interceptors>
 			<mvc:interceptor>
-				<mvc:mapping path="/shopCartActive/*"/>
-				<!--  <mvc:exclude-mapping path="/user/login.action"/>-->
+				<mvc:mapping path="/Active/*"/>
+			
 				<bean class="com.sky.common.shopCartInterceptor"></bean>
 			</mvc:interceptor>
 			
-		</mvc:interceptors>
+		</mvc:interceptors> -->
 </beans>
 
 
