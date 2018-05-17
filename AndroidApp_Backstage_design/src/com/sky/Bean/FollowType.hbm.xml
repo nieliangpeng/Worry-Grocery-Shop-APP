@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="FollowType" table="follow_type">
+		<id name="FT_id" column="FT_id">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="user" column="user_id" class="User" lazy="false"></many-to-one>
+		<many-to-one name="invtType" column="type_id" class="InvtType" lazy="false"></many-to-one>
+
+	</class>
+</hibernate-mapping>

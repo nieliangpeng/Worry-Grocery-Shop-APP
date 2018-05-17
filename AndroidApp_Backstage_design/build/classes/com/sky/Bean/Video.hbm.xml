@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Video" table="video">
+		<id name="video_id" column="video_id">
+			<generator class="increment" />
+		</id>
+		<property name="video_fileName" />
+		<property name="video_resource" />
+		<property name="video_time" />
+		<property name="good_num" />
+	
+	</class>
+</hibernate-mapping>

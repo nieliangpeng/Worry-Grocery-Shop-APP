@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Invitation" table="invitation">
+		<id name="Ivtn_id" column="Ivtn_id">
+			<generator class="increment" />
+		</id>
+		<property name="Ivtn_time" />
+		<property name="Ivtn_content" />
+		<property name="Ivtn_title" />
+		<property name="Ivtn_PraiseNum" />
+		<property name="Ivtn_state" />
+		<property name="Ivtn_isPublic"></property>
+		<property name="Ivtn_lookNum"></property>
+		
+		<many-to-one name="user" column="user_id" class="User" lazy="false"/>
+		<many-to-one name="invtType" column="type_id" class="InvtType" lazy="false"/>
+		<set name="imageSet" cascade="delete" inverse="true" lazy="false" >
+			<key column="Ivtn_id" />
+			<one-to-many class="Image" />
+		</set>
+		
+		<set name="collectSet" cascade="delete" inverse="true" lazy="false" >
+			<key column="Ivtn_id" />
+			<one-to-many class="Collect" />
+		</set>
+		<set name="commentSet" cascade="delete" inverse="true" lazy="false" >
+			<key column="Ivtn_id" />
+			<one-to-many class="Comment" />
+		</set>
+	</class>
+</hibernate-mapping>

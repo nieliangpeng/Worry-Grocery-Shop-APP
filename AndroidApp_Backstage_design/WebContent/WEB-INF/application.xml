@@ -45,14 +45,25 @@
 			</property>
 			 <property name="mappingResources">
                <list>
-                 <!--  <value>com/sky/Bean/Admin.hbm.xml</value>
-                  <value>com/sky/Bean/Person.hbm.xml</value>
-                  <value>com/sky/Bean/Users.hbm.xml</value>
-                  <value>com/sky/Bean/Address.hbm.xml</value>
-                  <value>com/sky/Bean/Orders.hbm.xml</value>
-                  <value>com/sky/Bean/Food.hbm.xml</value>
-                  <value>com/sky/Bean/FoodType.hbm.xml</value>
-                  <value>com/sky/Bean/OrderDetail.hbm.xml</value>-->
+                  <value>com/sky/Bean/Admin.hbm.xml</value>
+                  <value>com/sky/Bean/Collect.hbm.xml</value>
+                  <value>com/sky/Bean/Comment.hbm.xml</value>
+                  <value>com/sky/Bean/Follow.hbm.xml</value>
+                  <value>com/sky/Bean/FollowType.hbm.xml</value>
+                  <value>com/sky/Bean/GetLetter.hbm.xml</value>
+                  <value>com/sky/Bean/Image.hbm.xml</value>
+                  <value>com/sky/Bean/Invitation.hbm.xml</value>
+                  <value>com/sky/Bean/InvtType.hbm.xml</value>
+                   <value>com/sky/Bean/Joke.hbm.xml</value>
+                  <value>com/sky/Bean/LetterReply.hbm.xml</value>
+                  <value>com/sky/Bean/PenFriend.hbm.xml</value>
+                  <value>com/sky/Bean/Reply.hbm.xml</value>
+                  <value>com/sky/Bean/TextShout.hbm.xml</value>
+                  <value>com/sky/Bean/TreeHoles.hbm.xml</value>
+                  <value>com/sky/Bean/User.hbm.xml</value>
+                  <value>com/sky/Bean/Video.hbm.xml</value>
+                   <value>com/sky/Bean/VoiceScream.hbm.xml</value>
+                 
                </list>
             </property>
 		</bean>

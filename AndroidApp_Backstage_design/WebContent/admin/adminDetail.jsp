@@ -29,17 +29,6 @@
 <body>
 ${updateAdminMsg}
 <script type="text/javascript">
-function checkTelephone() {
-	var telephone = document.getElementById("telephone");
-	var telephone_ = /^\d{11}$/;
-	if (telephone != null && telephone.value != "") {
-		if (telephone.value.match(telephone_) == null) {
-			telephone.value = "";
-			alert("手机号码格式不对，重新输入");
-			telephone.focus();
-		} 
-	} 
-}
 function sub() {
 	
 	var upimg=document.getElementById("phone").value;
@@ -67,73 +56,34 @@ function sub() {
 					<!--用户信息样式-->
 					<!--个人信息-->
 					<div class="Personal_info" id="Personal">
-					<form action="${path_}/updateAdmin.action" method="get">
 							
 							<ul class="xinxi">
 								
 								
 								<li>
-									<label>用户名：</label> 
+									<label>手机号码：</label> 
 										<span>
-											<strong style="color: green;">${admin.admin_username}</strong>
+											<strong style="color: green;">${admin.admin_phone}</strong>
 										</span>
 								</li>
 								<li>
 									<label>真实姓名：</label> 
 										<span>
 											<strong style="color: green;">
-												<c:if test="${admin!=null}">
-													<%=((Admin)session.getAttribute("admin")).getPerson().getRealName() %>
-												</c:if>
+												${admin.admin_name}
 											</strong>
 										</span>
 								</li>
-								<li>
-									<label>身份证号：</label> 
-										<span>
-											<strong style="color: green;">
-												<c:if test="${admin!=null}">
-													<%=((Admin)session.getAttribute("admin")).getPerson().getIdNumber() %>
-												</c:if>
-											</strong>
-										</span>
-								</li>
-							    <li>
-									<label>邮箱：</label> 
-										<span>
-											<strong style="color: green;">${admin.admin_email}</strong>
-											
-										</span>
-							   </li>
-								
-								<li>
-							   		<label>手机号码：</label> 
-							   		<span>
-							   			<input name="telephone" id="telephone"
-										type="text" value="${admin.telephone}" class="text" disabled="disabled" onchange="checkTelephone()"  />
-								    </span>
-							   </li>
-								<li>
-								 	<label>家庭住址：</label> 
-								 	<span>
-							   			<input name="address" type="text" value="${admin.address}" class="text" disabled="disabled" />
-								    </span>	
-								</li>
-								
-								
-								<div class="bottom">
-									<input name="" type="button" value="修改信息" class="modify" /><input
-										name="" type="submit" value="确认修改" class="modify" class="confirm" />
-								</div>
+
 							</ul>
-							<input type="hidden" name="AdminUsername" value="${admin.admin_username}" /> 
-						</form>
+							
+						
 						<form action="${path_}/updateAdminPhone.action" method="post" enctype="multipart/form-data" onsubmit="return sub();">
 							<ul class="Head_portrait">
-								<li class="User_avatar"><img width="200px;" height="200px;" alt="" src="${pageContext.request.contextPath}/upload/admin/${admin.admin_username}/${admin.admin_image}"></li>
+								<li class="User_avatar"><img width="200px;" height="200px;" alt="" src="${pageContext.request.contextPath}/upload/admin/${admin.admin_phone}/${admin.admin_header}"></li>
 								<li><input type="file" name="phone" id="phone"/></li>
 								<li><input name="name" type="submit" value="上传头像" class="submit" /></li>
-								<li><input type="hidden" name="AdminUsername" value="${admin.admin_username}" /> </li>
+								<li><input type="hidden" name="AdminTelephone" value="${admin.admin_phone}" /> </li>
 							</ul>
 						</form>
 					</div>

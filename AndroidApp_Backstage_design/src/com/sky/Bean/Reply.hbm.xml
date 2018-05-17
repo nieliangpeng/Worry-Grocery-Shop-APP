@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Reply" table="reply">
+		<id name="reply_id" column="reply_id">
+			<generator class="increment" />
+		</id>
+		<property name="reply_content" />
+		
+		<many-to-one name="comment" column="comment_id" class="Comment" lazy="false"/>
+		
+		<many-to-one name="user" column="user_id" class="User" lazy="false"/>
+	</class>
+</hibernate-mapping>

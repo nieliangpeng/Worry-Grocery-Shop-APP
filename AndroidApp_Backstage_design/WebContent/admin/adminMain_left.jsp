@@ -29,8 +29,9 @@ body{overflow-x:hidden; background:url(${path}/images/main/leftbg.jpg) left top 
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-	<div><a href="${path_}/flushPhone.action"><img src="${pageContext.request.contextPath}/upload/admin/${admin.admin_username}/${admin.admin_image}" width="44" height="44" /></a></div>
-    <span>用户：${admin.admin_username}<br>角色：管理员</span>
+	
+	<div><a href="${path_}/flushPhone.action"><img src="${pageContext.request.contextPath}/upload/admin/${admin.admin_phone}/${admin.admin_header}" width="44" height="44" /></a></div>
+    <span>账号：${admin.admin_phone }<br>角色：管理员</span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">

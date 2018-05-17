@@ -16,7 +16,7 @@
 
 	<frame src="${path}/adminMain_top.jsp" name="topframe" id="topframe" scrolling="no" frameborder="no" />
 
-	<frameset id="attachucp" framespacing="0" border="0" frameborder="no" cols="194,12,*" rows="*">
+	<frameset id="attachucp" framespacing="0" border="0" frameborder="no" cols="200,12,*" rows="*">
 		<frame name="leftFrame" scrolling="auto"  frameborder="no"  src="${path}/adminMain_left.jsp"></frame>
 		<frame id="leftbar" name="switchFrame" scrolling="no" src="${path }/swich.html"></frame>
 		<frame name="mainFrame" scrolling="auto"  border="0"  src="${path }/adminMain_right.jsp"></frame>

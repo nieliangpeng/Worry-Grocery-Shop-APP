@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Joke" table="joke">
+		<id name="joke_id" column="joke_id">
+			<generator class="increment" />
+		</id>
+		<property name="joke_content" />
+		
+	
+	</class>
+</hibernate-mapping>

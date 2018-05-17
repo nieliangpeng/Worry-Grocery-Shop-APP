@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<span style="color:#528dc5;"><strong>亲爱的<c:if test="${admin!=null}"><%=((Admin)session.getAttribute("admin")).getPerson().getRealName() %></c:if>,<br/><br/>你好,欢迎登录后台管理系统！</strong></span>
+<span style="color:#528dc5;"><strong>亲爱的<c:if test="${admin!=null}"><%=((Admin)session.getAttribute("admin")).getAdmin_name() %></c:if>,<br/><br/>你好,欢迎登录后台管理系统！请开始你的表演！！！</strong></span>
 	
 </body>
 </html>

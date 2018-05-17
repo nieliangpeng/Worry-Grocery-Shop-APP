@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Comment" table="comment">
+		<id name="comment_id" column="comment_id">
+			<generator class="increment" />
+		</id>
+		<property name="comment_content" />
+		<property name="comment_state" />
+		<property name="comment_isRealNam" />
+		<property name="comment_image" />
+		<property name="comment_time" />
+		<property name="comment_praiseNum" />
+		<many-to-one name="user" column="user_id" class="User" lazy="false"/>
+		
+		<many-to-one name="invitation" column="Ivtn_id" class="Invitation" lazy="false"/>
+		<set name="replySet" cascade="delete" inverse="true" lazy="false" >
+			<key column="comment_id" />
+			<one-to-many class="Reply" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Image" table="image">
+		<id name="image_id" column="image_id">
+			<generator class="increment" />
+		</id>
+		<property name="image_name" />
+		<many-to-one name="invitation" column="Ivtn_id" class="Invitation" lazy="false"/>
+
+	</class>
+</hibernate-mapping>

@@ -61,25 +61,24 @@
 			var newPassword1 = document.getElementById("newPassword1");
 			if (password.value == "" || password == null) {
 				alert("原密码不可以为空");
-				password.focus();
+				
 				return false;
 			} else if (newPassword.value == "" || newPassword == null) {
 				alert("新密码不可以为空");
-				newPassword.focus();
+				
 				return false;
 			} else if (newPassword1.value == "" || newPassword1 == null) {
 				alert("核对密码框不可以为空");
-				newPassword1.focus();
+				
 				return false;
 			} else if(truePwd.value!=password.value){
 				alert("原密码不正确");
-				password.value="";
-				password.focus();
+				
 				return false;
 			}else if(newPassword1.value!=newPassword.value){
 				alert("两次输入密码不一致");
 				newPassword1.value="";
-				newPassword1.focus();
+				
 				return false;
 			}
 			return true;
@@ -126,8 +125,8 @@
 											name="" type="submit" value="确认密码" class="confirm" />
 									</div>
 									<li>
-										<input type="hidden" id="truePwd" name="truePwd" value="${admin.admin_passwd}" /> 
-										<input type="hidden" name="username" value="${admin.admin_username}" /> 
+										<input type="hidden" id="truePwd" name="truePwd" value="${admin.admin_pwd}" /> 
+										<input type="hidden" name="telephone" value="${admin.admin_phone}" /> 
 									</li>
 								</ul>
 							</form>

@@ -22,18 +22,18 @@
 		id="header">
 		<tr>
 			<td rowspan="2" align="left" valign="top" id="logo"><img
-				src="${path}/images/main/logo.png" width="74" height="64"></td>
+				src="${path}/images/main/logo2.png" width="74" height="64"></td>
 			<td align="left" valign="bottom">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td align="left" valign="bottom" id="header-name">&nbsp;&nbsp;&nbsp;你好，管理员:<c:if test="${admin!=null}"><%=((Admin)session.getAttribute("admin")).getPerson().getRealName() %></c:if></td>
+						<td align="left" valign="bottom" id="header-name">&nbsp;&nbsp;&nbsp;你好，管理员:<c:if test="${admin!=null}"><%=((Admin)session.getAttribute("admin")).getAdmin_name() %></c:if></td>
 						<td align="right" valign="top" id="header-right">
 						<a href="${path_}/adminLoginOut.action"  onFocus="this.blur()"
 							class="admin-out" target="allFrame">退出登录</a> 
 						<a href="${path}/adminMain_right.jsp" target="mainFrame"
-							onFocus="this.blur()" class="admin-home">管理首页</a> 
-						<a href="${path_}/jumpToIndex.action" target="allFrame" onFocus="this.blur()"
-							class="admin-index">网站首页</a> 
+							onFocus="this.blur()" class="admin-home">首页</a> 
+						<!--  <a href="${path_}/jumpToIndex.action" target="allFrame" onFocus="this.blur()"
+							class="admin-index">网站首页</a> -->
 							<span> <!-- 日历 --> <SCRIPT
 									type=text/javascript src="js/clock.js"></SCRIPT> <SCRIPT
 									type=text/javascript>

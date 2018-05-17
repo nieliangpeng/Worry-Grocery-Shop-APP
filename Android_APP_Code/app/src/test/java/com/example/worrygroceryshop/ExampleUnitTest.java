@@ -1,4 +1,4 @@
-package com.example.worrygroceryshopapp;
+package com.example.worrygroceryshop;
 
 import org.junit.Test;
 

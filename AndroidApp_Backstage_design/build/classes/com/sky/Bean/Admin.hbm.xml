@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Admin" table="admin">
+		<id name="admin_id" column="admin_id">
+			<generator class="increment" />
+		</id>
+		<property name="admin_phone" />
+		<property name="admin_pwd" />
+		<property name="admin_name" />
+		<property name="admin_header" />
+		<property name="admin_validatecode" />
+	
+	</class>
+</hibernate-mapping>

@@ -57,24 +57,7 @@
 			document.getElementById("zhuce").disabled = false;
 		}
 	}
-	function checkUsername() {
-		var username = document.getElementById("username");
-		var username_ = /^[0-9a-zA-Z_]{3,10}$/;
-		if (username == null || username.value == "") {
-			alert("用户名不可以为空");
-			document.getElementById("username_yx").style.display = "none";
-			username.focus();
-		} else {
-			if (username.value.match(username_) == null) {
-				username.value = "";
-				document.getElementById("username_yx").style.display = "none";
-				alert("用户名格式不对，重新输入");
-				username.focus();
-			} else {
-				document.getElementById("username_yx").style.display = "inline";
-			}
-		}
-	}
+	
 	function checkRealName() {
 		var RealName = document.getElementById("RealName");
 		
@@ -87,18 +70,7 @@
 			
 		}
 	}
-	function checkIdNumber(){
-		var IdNumber = document.getElementById("IdNumber");
-		
-		if (IdNumber == null || IdNumber.value == "") {
-			alert("身份证号码不可以为空");
-			document.getElementById("IdNumber_yx").style.display = "none";
-			RealName.focus();
-		} else {
-			document.getElementById("IdNumber_yx").style.display = "inline";
-			
-		}
-	}
+	
 	function checkPassword() {
 		var password = document.getElementById("password");
 		var password_ = /^[0-9a-zA-Z_]{3,10}$/;
@@ -134,24 +106,7 @@
 			}
 		}
 	}
-	function checkEmail() {
-		var email = document.getElementById("email");
-		var email_ = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
-		if (email == null || email.value == "") {
-			alert("邮箱不可以为空");
-			document.getElementById("email_yx").style.display = "none";
-			email.focus();
-		} else {
-			if (email.value.match(email_) == null) {
-				email.value = "";
-				document.getElementById("email_yx").style.display = "none";
-				alert("邮箱格式不对，重新输入");
-				email.focus();
-			} else {
-				document.getElementById("email_yx").style.display = "inline";
-			}
-		}
-	}
+	
 	function checkTelephone() {
 		var telephone = document.getElementById("telephone");
 		var telephone_ = /^\d{11}$/;
@@ -167,56 +122,32 @@
 			document.getElementById("telephone_yx").style.display = "none";
 		}
 	}
-	function checkAddress() {
-		var address = document.getElementById("address");
-		document.getElementById("address_yx").style.display = "inline";
-		if (address != null && address.value != "") {
-			document.getElementById("address_yx").style.display = "inline";
-		} else{
-			document.getElementById("address_yx").style.display = "none";
-		}
-		
-	}
+	
 	function sub() {
-		var username = document.getElementById("username");
+		var telephone = document.getElementById("telephone");
 		var RealName = document.getElementById("RealName");
-		var IdNumber = document.getElementById("IdNumber");
+	
 		var password = document.getElementById("password");
-		var email = document.getElementById("email");
-		var msg=document.getElementById("msg");
 		var E_msg=document.getElementById("E_msg");
 		var upimg=document.getElementById("upimg").value;
-		if (username.value == "" || username == null) {
-			alert("用户名不可以为空");
-			username.focus();
+		if (telephone.value == "" || telephone == null) {
+			alert("手机号码不可以为空");
+			telephone.focus();
 			return false;
-		} else if(RealName.value==""||RealName ==null){
+		}else if(E_msg.innerText=="该手机号码已注册"){
+			alert("该手机号码已被注册，请换一个手机号码");
+			email.value="";
+			email.focus();
+			return false;
+		}else if(RealName.value==""||RealName ==null){
 			alert("真实姓名不可以为空");
 			RealName.focus();
-			return false;
-		}else if(IdNumber.value==""||IdNumber ==null){
-			alert("身份证号码不可以为空");
-			IdNumber.focus();
-			return false;
-		}else if(msg.innerText=="该昵称已注册"){
-			alert("该昵称已被注册，请换一个昵称");
-			username.value="";
-			username.focus();
 			return false;
 		}else if (password.value == "" || password == null) {
 			alert("密码不可以为空");
 			password.focus();
 			return false;
-		} else if (email.value == "" || email == null) {
-			alert("邮箱不可以为空");
-			email.focus();
-			return false;
-		} else if(E_msg.innerText=="该邮箱已注册"){
-			alert("该邮箱已被注册，请换一个邮箱");
-			email.value="";
-			email.focus();
-			return false;
-		}else if(upimg.length==0){
+		}  else if(upimg.length==0){
 			alert("请上传头像");
 			
 			return false;
@@ -244,13 +175,13 @@
 					<form name="register" action="${path_}/saveAdmin.action"  method="post" enctype="multipart/form-data" onsubmit="return sub();">
 						<table>
 							<tr>
-								<td><label><strong><font color="red">*</font>用户名:</strong></label></td>
-								<td><input type="text" name="admin_username" id="username"
-									placeholder=" 3-10位   数字/字母/下划线"  onchange="checkUsername()"/></td>
-								<td><div id="username_yx" style="margin-left: 10px;display: none">
-									   <span id="msg"><font color="green">允许</font></span>
-									</div>
-								</td>
+								<td><label><strong><font color="red">*</font>手机号码:</strong></label></td>
+								<td><input type="text" name="telephone" id="telephone"
+									placeholder=" 输入有效的手机号码" onchange="checkTelephone()" /></td>
+								<td><div id="telephone_yx"
+										style="margin-left: 10px; display: none">
+										<span id="E_msg"><font color="green">允许</font></span>
+									</div></td>
 							</tr>
 							<tr>
 								<td><label><strong><font color="red">*</font>真实姓名:</strong></label></td>
@@ -261,15 +192,7 @@
 									</div>
 								</td>
 							</tr>
-							<tr>
-								<td><label><strong><font color="red">*</font>身份证号码:</strong></label></td>
-								<td><input type="text" name="IdNumber" id="IdNumber"
-									placeholder="输入有效身份证号码"  onchange="checkIdNumber()"/></td>
-								<td><div id="IdNumber_yx" style="margin-left: 10px;display: none">
-									  <font color="green">ok</font>
-									</div>
-								</td>
-							</tr>
+							
 							<tr>
 								<td><label><strong><font color="red">*</font>密码:</strong></label>
 								</td>
@@ -290,33 +213,9 @@
 										<font color="green">密码正确</font>
 									</div></td>
 							</tr>
-							<tr>
-								<td><label><strong><font color="red">*</font>邮箱：</strong></label></td>
-								<td><input type="email" name="admin_email" id="email"
-									placeholder=" 输入有效的邮箱" onchange="checkEmail()" /></td>
-								<td><div id="email_yx"
-										style="margin-left: 10px; display: none">
-										<span id="E_msg"><font color="green">允许</font></span>
-									</div></td>
-							</tr>
-							<tr>
-								<td><label><strong>手机号码:</strong></label></td>
-								<td><input type="text" name="telephone" id="telephone"
-									placeholder=" 输入有效的手机号码" onchange="checkTelephone()" /></td>
-								<td><div id="telephone_yx"
-										style="margin-left: 10px; display: none">
-										<font color="green">允许</font>
-									</div></td>
-							</tr>
-							<tr>
-								<td><label class="contact"><strong>家庭地址:</strong></label></td>
-								<td><input type="text" class="contact_input" name="address"
-									id="address" placeholder=" 输入有效的地址" onchange="checkAddress()" /></td>
-								<td><div id="address_yx"
-										style="margin-left: 10px; display: none">
-										<font color="green">允许 
-									</div></td>
-							</tr>
+							
+							
+							
 						</table>
 						<table>
 							<tr>
@@ -341,15 +240,16 @@
 </body>
 </html>
 <script type="text/javascript">
-//邮箱AJAX
+//手机号码AJAX
 window.onload=function()
 {
-  var nameElement=document.getElementsByName("admin_username")[0];
-  var emailElement=document.getElementsByName("admin_email")[0];
-  //为昵称选项注册onblur事件
-  emailElement.onblur=function()
-  {
-    var email=this.value;
+  var telephoneElement=document.getElementsByName("telephone")[0];
+ 
+  //为手机号码选项注册onblur事件
+  telephoneElement.onblur=function()
+  { 
+	  
+    var telephone=this.value;
     //1.获取XMLHttpRequest对象
     var req=getXMLHttpRequest();
     //4.处理响应结果
@@ -361,7 +261,7 @@ window.onload=function()
           var msg=document.getElementById("E_msg");
           //根据返回的结果显示不同的信息
           if(req.responseText=="true"){
-            msg.innerHTML="<font color='red'>该邮箱已注册</font>";
+            msg.innerHTML="<font color='red'>该手机号码已注册</font>";
           }else if(req.responseText=="kong"){
         	  msg.innerHTML="";
           }else{
@@ -370,42 +270,14 @@ window.onload=function()
         }
       }
     }
-  
+   
     //2.建立一个连接
-    req.open("get","${pageContext.request.contextPath}/checkAdminEmail.action?email="+email);
+    req.open("get","${pageContext.request.contextPath}/checkAdminTelephone.action?telephone="+telephone);
     //3.发送get请求
     req.send(null);
   }
-//为昵称选项注册onblur事件
-  nameElement.onblur=function()
-  {
-    var name=this.value;
-    //1.获取XMLHttpRequest对象
-    var req=getXMLHttpRequest();
-    //4.处理响应结果
-    req.onreadystatechange=function(){
-      if(req.readyState==4){//XMLHttpRequest对象读取成功
-    	 
-        if(req.status==200){//服务器相应正常
-        	
-          var msg=document.getElementById("msg");
-          //根据返回的结果显示不同的信息
-          if(req.responseText=="true"){
-            msg.innerHTML="<font color='red'>该昵称已注册</font>";
-          }else if(req.responseText=="kong"){
-        	  msg.innerHTML="";
-          }else{
-            msg.innerHTML="<font color='green'>可以使用</font>";
-          }
-        }
-      }
-    }
+
   
-    //2.建立一个连接
-    req.open("get","${pageContext.request.contextPath}/checkAdminUsername.action?name="+name);
-    //3.发送get请求
-    req.send(null);
-  }
 }
 function getXMLHttpRequest(){
 	  var xmlhttp;

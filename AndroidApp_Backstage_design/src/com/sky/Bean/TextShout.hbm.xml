@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="TextShout" table="textshout">
+		<id name="textShout_id" column="textShout_id">
+			<generator class="increment" />
+		</id>
+		<property name="textContent" />
+		
+		<many-to-one name="user" column="user_id" class="User" lazy="false"/>
+		
+	</class>
+</hibernate-mapping>

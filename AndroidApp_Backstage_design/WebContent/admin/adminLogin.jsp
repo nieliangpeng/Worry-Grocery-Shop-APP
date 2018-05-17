@@ -18,10 +18,10 @@
 	function AdminSub() {
 
 		var password = document.getElementById("AdminPassword");
-		var email = document.getElementById("AdminEmail");
+		var telephone = document.getElementById("AdminTelephone");
 		var verf=document.getElementById("AdminVerf");
-		if (email.value == "" || email == null) {
-			alert("邮箱不可以为空");
+		if (telephone.value == "" || telephone == null) {
+			alert("手机号码不可以为空");
 			return false;
 		}else if (password.value == "" || password == null) {
 			alert("密码不可以为空");
@@ -42,7 +42,7 @@
 	            <li class="top"></li>
 	            <li class="top2"></li>
 	            <li class="topA"></li>
-	            <li class="topB"><span><img src="${path}/images/login/logo.png" alt="" style="" /></span></li>
+	            <li class="topB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="${path}/images/login/logo2.png" width="190px" alt="" style="" /></span></li>
 	            <li class="topC"></li>
 	            <li class="topD">
 	            	
@@ -50,8 +50,8 @@
 	         			<font color="red">&nbsp;&nbsp;&nbsp;&nbsp;${AdminErrorMsg}</font>
 	         		</c:if>
 	                <ul class="login">
-	                    <li><span class="left login-text">邮箱：</span> <span style="left">
-	                        <input id="AdminEmail" type="text" class="txt" name="AdminEmail" value="${AdminEmail }"/>  
+	                    <li><span class="left login-text">手机：</span> <span style="left">
+	                        <input id="AdminTelephone" type="text" class="txt" name="AdminTelephone" value="${AdminTelephone}"/>  
 	                     
 	                    </span></li>
 	                    <li><span class="left login-text">密码：</span> <span style="left">
@@ -69,13 +69,13 @@
 	            <li class="middle_C">
 	            <span class="btn"><input value="登录" type="submit"  class="button"/></span>
 	            <span class="btn"><input type="checkbox"  name="autoLogin"/> 一周内自动登录&nbsp;&nbsp;</span>
-					<br/><br/>				
+				<br/><br/>				
 	            <span class="btn"><font color="red"><a href="${path_}/jumpToAdminFindPassword.action">忘记密码</a></font>
 	            </span>
 	            </li>
 	            <li class="middle_D"></li>
 	            <li class="bottom_A"></li>
-	            <li class="bottom_B">网站后台管理系统&nbsp;&nbsp;www.yijiaxiaodian.com</li>
+	            <li class="bottom_B">解忧杂货铺APP后台管理系统&nbsp;&nbsp;www.Worry-Grocery-Shop-APP.com</li>
 	        </ul>
 	    </div>
     </form>
