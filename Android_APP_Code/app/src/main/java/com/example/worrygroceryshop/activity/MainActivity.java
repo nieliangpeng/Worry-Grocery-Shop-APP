@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean handleMessage(Message msg) {
                 //实现页面跳转
+                finish();
                 startActivity(new Intent(getApplicationContext(),IndexActivity.class));
                 return false;
             }
-        }).sendEmptyMessageDelayed(0,5000);//表示延迟3秒发送任务
+        }).sendEmptyMessageDelayed(0,3000);//表示延迟3秒发送任务
     }
 }
