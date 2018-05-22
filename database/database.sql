@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-05-16 08:56:32
+Date: 2018-05-22 08:20:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -21,17 +21,19 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL AUTO_INCREMENT,
-  `admin_phone` char(255) NOT NULL,
-  `admin_pwd` char(255) NOT NULL,
-  `admin_name` char(255) NOT NULL,
+  `admin_phone` char(255) DEFAULT NULL,
+  `admin_pwd` char(255) DEFAULT NULL,
+  `admin_name` char(255) DEFAULT NULL,
   `admin_header` char(255) DEFAULT NULL,
   `admin_validatecode` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
+INSERT INTO `admin` VALUES ('1', '11111111111', '6666', '张三', 'u=281049605,2870971905&fm=27&gp=0.jpg', null);
+INSERT INTO `admin` VALUES ('2', '18227397826', '1111', '闫佳成', 'u=281049605,2870971905&fm=27&gp=0.jpg', null);
 
 -- ----------------------------
 -- Table structure for `collect`
@@ -61,8 +63,8 @@ CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `Ivtn_id` int(11) NOT NULL,
-  `comment _content` char(255) DEFAULT NULL,
-  `comment _state` char(255) DEFAULT NULL,
+  `comment_content` char(255) DEFAULT NULL,
+  `comment_state` char(255) DEFAULT NULL,
   `comment _isRealName
 comment_isRealNam` char(255) NOT NULL,
   `comment_image` char(255) NOT NULL,
@@ -235,10 +237,10 @@ CREATE TABLE `letterreply` (
 -- ----------------------------
 DROP TABLE IF EXISTS `penfriend`;
 CREATE TABLE `penfriend` (
-  `PF-id` int(11) NOT NULL AUTO_INCREMENT,
+  `PF_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id_A` int(11) NOT NULL,
   `user_id_B` int(11) NOT NULL,
-  PRIMARY KEY (`PF-id`),
+  PRIMARY KEY (`PF_id`),
   KEY `user_id_A` (`user_id_A`),
   KEY `user_id_B` (`user_id_B`),
   CONSTRAINT `penfriend_ibfk_1` FOREIGN KEY (`user_id_A`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -254,13 +256,13 @@ CREATE TABLE `penfriend` (
 DROP TABLE IF EXISTS `reply`;
 CREATE TABLE `reply` (
   `reply_id` int(11) NOT NULL AUTO_INCREMENT,
-  `comment _id` int(11) NOT NULL,
+  `comment_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `reply_content` char(255) DEFAULT NULL,
   PRIMARY KEY (`reply_id`),
-  KEY `comment _id` (`comment _id`),
+  KEY `comment _id` (`comment_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `reply_ibfk_1` FOREIGN KEY (`comment _id`) REFERENCES `comment` (`comment_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `reply_ibfk_1` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `reply_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
