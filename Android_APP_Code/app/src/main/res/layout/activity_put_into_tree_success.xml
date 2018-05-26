@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.example.worrygroceryshop.activity.PutIntoTreeSuccessActivity">
+    <RelativeLayout
+        android:id="@+id/gotoTree"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="树洞"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="240dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#33ff33"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/fly1" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/open_letter"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/put_successfully"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="放入树洞成功"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#33ff33"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/smile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/smile"/>
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.worrygroceryshop.activity.MoreActivity">
+    <!--心灵大师-->
+
+
+    <RelativeLayout
+        android:id="@+id/bigteacher"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/teacher" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="心灵大师榜"
+            android:textColor="@color/btn_gray_pressed_status"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!--山谷呐喊-->
+    <RelativeLayout
+        android:id="@+id/shut"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/bigteacher"
+        android:layout_marginEnd="26dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/shut" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="山谷呐喊"
+            android:textColor="@color/btn_gray_pressed_status"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!--每日一言-->
+    <RelativeLayout
+        android:id="@+id/worde"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/bigteacher"
+        android:layout_below="@+id/bigteacher"
+        android:layout_marginTop="59dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/book" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="每日一言"
+            android:textColor="@color/btn_gray_pressed_status"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!--树洞-->
+    <RelativeLayout
+        android:id="@+id/tree"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/shut"
+        android:layout_alignTop="@+id/worde"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/tree" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="树洞"
+            android:textColor="@color/btn_gray_pressed_status"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+        <!--叉号-->
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+
+            android:layout_marginTop="250dp"
+
+            android:src="@mipmap/cha1" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

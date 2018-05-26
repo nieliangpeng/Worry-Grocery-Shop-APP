@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.mob.sdk'
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.worrygroceryshop"
-        minSdkVersion 25
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -18,19 +18,18 @@ android {
     }
 }
 
-
-
 // 在MobSDK的扩展中注册SMSSDK的相关信息
 MobSDK {
-    appKey "25ec89faa8890"
-    appSecret "526c163c2f35021ab19afbce221ce4e9"
+    appKey "25f80dcc84f7e"
+    appSecret "7e2693bbf4d7934d0bd8125cf7f6aa89"
 
     SMSSDK {}
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
@@ -38,6 +37,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':easeui')
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
 
 
 }

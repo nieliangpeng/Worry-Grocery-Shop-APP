@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context="com.example.worrygroceryshop.activity.WriteLetterActivity">
+    <FrameLayout
+        android:id="@+id/titele"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#7fddafaf">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/back"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/put_into_tree"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="15dp"
+            android:text="放入树洞"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/fly1"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="13dp"/>
+    </FrameLayout>
+    <!--用户名-->
+    <LinearLayout
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/letter_bkgd">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/hole_letter_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="来自：#"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+            <!--设置用户名-->
+            <TextView
+                android:id="@+id/setUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一颗豆Zi"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--虚线-->
+    <ImageView
+        android:id="@+id/xuxian"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@mipmap/xuxian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="518dp"
+        android:orientation="vertical"
+        android:background="@mipmap/letter_bkgd">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="518dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/lettercontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top"
+                    android:hint="开始你的写信之旅吧！！！"
+                    android:inputType="textMultiLine"
+                    android:maxLines="30"
+                    android:minLines="19"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/letter_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="190dp"
+                    android:text="2018-5-23 16:24:41"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

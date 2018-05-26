@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:id="@+id/mypageItem"
+    android:background="#FFFFFF">
+    <ImageView
+        android:id="@+id/type_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@mipmap/song"/>
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:text="温暖你的心"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

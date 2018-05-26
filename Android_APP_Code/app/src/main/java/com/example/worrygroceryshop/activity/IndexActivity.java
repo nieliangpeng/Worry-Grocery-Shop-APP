@@ -1,21 +1,23 @@
 package com.example.worrygroceryshop.activity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.worrygroceryshop.R;
 import com.example.worrygroceryshop.fragment.FindFragment;
 import com.example.worrygroceryshop.fragment.HomePageFragment;
 import com.example.worrygroceryshop.fragment.MessageFragment;
-import com.example.worrygroceryshop.fragment.MyFragment;
 import com.example.worrygroceryshop.fragment.PostFragment;
 
 public class IndexActivity extends AppCompatActivity {
@@ -33,7 +35,16 @@ public class IndexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_index);
         //初始化
         initFragmentTabHost();
-        myFragmentTabhost.setCurrentTab(0);
+        Intent i=getIntent();
+        if(i!=null){
+            int go=i.getIntExtra("go",0);
+            if(go==4){
+                myFragmentTabhost.setCurrentTab(4);
+            }
+        }else{
+            myFragmentTabhost.setCurrentTab(0);
+        }
+
         myFragmentTabhost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
@@ -101,5 +112,15 @@ public class IndexActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (resultCode){
+            case 1:
+                myFragmentTabhost.setCurrentTab(4);
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

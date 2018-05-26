@@ -42,10 +42,10 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/shape"
         android:text="注册"
+        android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/login"

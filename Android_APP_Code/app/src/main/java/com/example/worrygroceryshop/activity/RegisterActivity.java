@@ -15,9 +15,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.worrygroceryshop.R;
+import com.example.worrygroceryshop.common.MyPathUrl;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,25 +47,63 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText validateCode;
     private Button getValideteCode;
     private Button register;
+    private ImageView back;
     private static final int IMAGE = 8888;
     private Bitmap photo=null;
-    String imagePath;
+    String imagePath;//头像路径
+    String name;
+    String pwd;
+    String repwd;
+    String phone1;
+    String code;
+
     Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case SMSSDK.RESULT_COMPLETE:
-                    Toast.makeText(RegisterActivity.this,"获取验证码请求发送成功",Toast.LENGTH_SHORT).show();
+                case 1:
+                   // Toast.makeText(RegisterActivity.this,"获取验证码请求发送成功",Toast.LENGTH_SHORT).show();
+
                     break;
                 case 2:
                     Toast.makeText(RegisterActivity.this,"获取验证码请求发送失败",Toast.LENGTH_SHORT).show();
                     break;
                 case 3:
                     //验证成功，进行注册
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            registerUser(imagePath,name,pwd, phone1);
+//                            Log.i("app","完成");
+                        }
+                    }.start();
 
+                    break;
                 case 4:
                     //验证失败
                     Toast.makeText(RegisterActivity.this,"验证失败",Toast.LENGTH_SHORT).show();
+                    break;
+                case 5:
+                    Toast.makeText(RegisterActivity.this,"注册失败",Toast.LENGTH_SHORT).show();;
+                    break;
+                case 6:
+                    Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            try {
+                                EMClient.getInstance().createAccount(name,pwd);
+                                Log.i("im","环信注册成功");
+                            } catch (HyphenateException e) {
+                                e.printStackTrace();
+                                Log.i("im","环信注册失败"+e.getErrorCode()+","+e.getMessage());
+                            }
+
+                        }
+                    }.start();
+                    //跳转到登录页面
+                    Intent i=new Intent(RegisterActivity.this,LoginActivity.class);
+                    startActivity(i);
                     break;
             }
             super.handleMessage(msg);
@@ -82,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
         imageView.setOnClickListener(listener);
         getValideteCode.setOnClickListener(listener);
         register.setOnClickListener(listener);
+        back.setOnClickListener(listener);
     }
 
     public void getView() {
@@ -93,6 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
         validateCode=findViewById(R.id.validateCode);
         getValideteCode=findViewById(R.id.getValidateCode);
         register=findViewById(R.id.register);
+        back=findViewById(R.id.back);
     }
     class ClickListener implements View.OnClickListener{
 
@@ -118,11 +162,11 @@ public class RegisterActivity extends AppCompatActivity {
                     break;
                 case R.id.register:
                     Bitmap image=photo;
-                    String name=user_name.getText().toString().trim();
-                    String pwd=user_pwd.getText().toString().trim();
-                    String repwd=user_repwd.getText().toString().trim();
-                    String phone1=user_phone.getText().toString().trim();
-                    String code=validateCode.getText().toString().trim();
+                    name=user_name.getText().toString().trim();
+                    pwd=user_pwd.getText().toString().trim();
+                    repwd=user_repwd.getText().toString().trim();
+                    phone1=user_phone.getText().toString().trim();
+                    code=validateCode.getText().toString().trim();
                     if(image==null){
                         Toast.makeText(RegisterActivity.this,"请点击头像框选择一个头像",Toast.LENGTH_SHORT).show();
                     }else{
@@ -160,6 +204,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                     break;
+                case R.id.back:
+                    Log.i("app","onclickback");
+                    Intent i=new Intent(RegisterActivity.this,IndexActivity.class);
+                    setResult(1,i);
+                    finish();
+                    break;
+
             }
         }
     }
@@ -192,7 +243,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Log.i("app","获取验证码成功");
 
 
-                    message.what = SMSSDK.RESULT_COMPLETE;
+                    message.what = 1;
 
 
                 } else{
@@ -238,36 +289,53 @@ public class RegisterActivity extends AppCompatActivity {
         SMSSDK.unregisterAllEventHandler();
     }
     //注册方法
-    public void registerUser(String path,String name,String pwd,String mobilePhone){
+    public void registerUser(String path,String name1,String pwd1,String mobilePhone){
+        Log.i("mes","11111111111111");
         OkHttpClient okHttpClient = new OkHttpClient();
         File file = new File(path);
         if (!file.exists()){
             Toast.makeText(this, "头像不存在", Toast.LENGTH_SHORT).show();
             return;
         }
+        Log.i("mes","22222222222222");
         RequestBody muiltipartBody = new MultipartBody.Builder()
                 //一定要设置这句
                 .setType(MultipartBody.FORM)
-                .addFormDataPart("user_name", name)
-                .addFormDataPart("user_pwd",pwd)
+                .addFormDataPart("user_name", name1)
+                .addFormDataPart("user_pwd",pwd1)
                 .addFormDataPart("user_phone",mobilePhone)
                 .addFormDataPart("user_image",file.getName(), RequestBody.create(MediaType.parse("application/octet-stream"), file))
                 .build();
         Request.Builder builder = new Request.Builder();
-        Request request=builder.url("路径").post(muiltipartBody).build();
+        Request request=builder.url(MyPathUrl.MyURL+"saveUser1.action").post(muiltipartBody).build();
         final Call call = okHttpClient.newCall(request);
 
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i("app","注册失败");
-                Toast.makeText(RegisterActivity.this,"注册失败",Toast.LENGTH_SHORT).show();
+
+                Log.i("app","连接失败");
+                Log.i("错误信息",e.getMessage());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.i("app","注册成功");
-                //跳转到登录页面
+                Log.i("app","连接成功");
+                String state=response.body().string();
+                Log.i("app","state="+state);
+                if(state.equals("success")){
+                    Message message = Message.obtain();
+                    message.what = 6;
+                    handler.sendMessage(message);
+
+                }else{
+                    Message message = Message.obtain();
+                    message.what = 5;
+                    handler.sendMessage(message);
+
+
+                }
+
             }
         });
     }

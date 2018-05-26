@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\77d8abfc5d8ece469c77f85f78e517b8\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ffd757299a99b34bb17b8222930096f9\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\77d8abfc5d8ece469c77f85f78e517b8\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\77d8abfc5d8ece469c77f85f78e517b8\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    }
+]
