@@ -90,11 +90,11 @@ public final class R {
         public static int notification_background = 0x7f0c00c8;
         public static int notification_main_column = 0x7f0c00c9;
         public static int notification_main_column_container = 0x7f0c00ca;
-        public static int right_icon = 0x7f0c00e7;
-        public static int right_side = 0x7f0c00ea;
-        public static int status_bar_latest_event_content = 0x7f0c0112;
-        public static int text = 0x7f0c011e;
-        public static int text2 = 0x7f0c0120;
+        public static int right_icon = 0x7f0c00e8;
+        public static int right_side = 0x7f0c00eb;
+        public static int status_bar_latest_event_content = 0x7f0c0113;
+        public static int text = 0x7f0c011f;
+        public static int text2 = 0x7f0c0121;
         public static int time = 0x7f0c0127;
         public static int title = 0x7f0c0129;
     }

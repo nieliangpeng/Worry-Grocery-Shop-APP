@@ -17,7 +17,6 @@ public class MyAPP extends Application {
         EaseUI.getInstance().init(this,null);
         EMClient.getInstance().setDebugMode(true);
 
-
         MobSDK.init(this);
     }
 }

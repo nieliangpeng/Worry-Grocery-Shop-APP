@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/smssdk_white"
+    tools:context="com.example.worrygroceryshop.activity.deleteReplyLetterSuccessfulActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/smssdk_white">
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/back"
+            android:background="@android:color/transparent" />
+        <TextView
+            android:id="@+id/gotoTree"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="我的信件"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="210dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#33ff33"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:src="@mipmap/fly1"
+            android:background="@android:color/transparent" />
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/open_letter"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/delete_letter"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除成功"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#33ff33"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/smile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/smile"/>
+</LinearLayout>

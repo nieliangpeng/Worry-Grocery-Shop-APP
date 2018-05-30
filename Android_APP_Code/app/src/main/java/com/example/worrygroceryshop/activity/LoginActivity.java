@@ -3,6 +3,7 @@ package com.example.worrygroceryshop.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -16,13 +17,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.worrygroceryshop.R;
 import com.example.worrygroceryshop.bean.User;
-import com.example.worrygroceryshop.common.GlideApp;
+//import com.example.worrygroceryshop.common.GlideApp;
 import com.example.worrygroceryshop.common.MyPathUrl;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.hyphenate.EMCallBack;
+import com.hyphenate.EMConnectionListener;
+import com.hyphenate.EMError;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.util.NetUtils;
 
 import java.io.IOException;
 
@@ -44,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button login;
     private String data;
     private SharedPreferences preferences;
+    private User user;
     Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -126,7 +134,15 @@ public class LoginActivity extends AppCompatActivity {
         public void onFocusChange(View v, boolean hasFocus) {
             switch (v.getId()){
                 case R.id.user_phone:
-                    GlideApp.with(LoginActivity.this)
+//                    GlideApp.with(LoginActivity.this)
+//                            .load(MyPathUrl.MyURL+"getHeader.action?user_phone="+edPhone.getText().toString().trim())
+//                            .placeholder(R.mipmap.placeholder)
+//                            .error(R.mipmap.error)
+//                            .fallback(R.mipmap.ic_launcher_round)
+//                            .centerCrop()
+//                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                            .into(header);
+                    Glide.with(LoginActivity.this)
                             .load(MyPathUrl.MyURL+"getHeader.action?user_phone="+edPhone.getText().toString().trim())
                             .placeholder(R.mipmap.placeholder)
                             .error(R.mipmap.error)
@@ -169,9 +185,28 @@ public class LoginActivity extends AppCompatActivity {
                             .serializeNulls()
                             .setPrettyPrinting()
                             .create();
-                    User user = gson.fromJson(data, User.class);
+                    user = gson.fromJson(data, User.class);
                     Log.i("userphone",user.getUser_phone());
                     if(user!=null){
+                        //登录环信
+                        EMClient.getInstance().login(user.getUser_name(), user.getUser_pwd(), new EMCallBack() {
+                            @Override
+                            public void onSuccess() {
+                                Log.i("im","环信登录成功");
+
+                            }
+
+                            @Override
+                            public void onError(int i, String s) {
+                                Log.i("im","登录失败"+i+","+s);
+                            }
+
+                            @Override
+                            public void onProgress(int i, String s) {
+
+                            }
+                        });
+                        //
                         Message message = Message.obtain();
                         message.what = 12;
                         handler.sendMessage(message);
@@ -189,5 +224,66 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+    }
+    /**
+     *申请权限的回调
+     */
+    @Override
+    public void onRequestPermissionsResult(
+            int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 1:
+                if (grantResults.length > 0 &&
+                        grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    //获取了权限后需要处理的逻辑
+                    EMClient.getInstance().login(user.getUser_name(), user.getUser_pwd(), new EMCallBack() {
+                        @Override
+                        public void onSuccess() {
+                            Log.i("im","环信登录成功");
+
+                        }
+
+                        @Override
+                        public void onError(int i, String s) {
+                            Log.i("im","登录失败"+i+","+s);
+                        }
+
+                        @Override
+                        public void onProgress(int i, String s) {
+
+                        }
+                    });
+                } else {
+                    Toast.makeText(this, "你拒绝了这个权限", Toast.LENGTH_SHORT).show();
+                } break;
+        }
+    }
+    //实现ConnectionListener接口
+    public class MyConnectionListener implements EMConnectionListener {
+        @Override
+        public void onConnected() {
+        }
+        @Override
+        public void onDisconnected(final int error) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if(error == EMError.USER_REMOVED){
+                        // 显示帐号已经被移除
+
+                    }else if (error == EMError.USER_LOGIN_ANOTHER_DEVICE) {
+                        // 显示帐号在其他设备登录
+                    } else {
+                        if (NetUtils.hasNetwork(LoginActivity.this)){
+                            //连接不到聊天服务器
+                        }else{
+                            //当前网络不可用，请检查网络设置
+                        }
+
+                    }
+                }
+            });
+        }
     }
 }

@@ -91,9 +91,41 @@
         <activity
             android:name=".activity.TreeHolesActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.WriteLetterActivity" />
-        <activity android:name=".activity.PutIntoTreeSuccessActivity" />
-        <activity android:name=".activity.MyTreeHolesActivity"></activity>
+        <activity
+            android:name=".activity.WriteLetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PutIntoTreeSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyTreeHolesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyLetterItemDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RemoveLetterSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeleteLetterSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GetALetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WatchGetALetterDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReturnIntoTreeHolesSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ReplyLetterActivity" />
+        <activity android:name=".activity.ReplyLetterSuccessfulActivity" />
+        <activity android:name=".activity.MyReplyLetterItemActivity" />
+        <activity android:name=".activity.LookReplyLetterActivity" />
+        <activity android:name=".activity.deleteReplyLetterSuccessfulActivity" />
+        <activity android:name=".activity.PenFriendHomePageActivity" />
+        <activity android:name=".activity.PenFriendActivity" />
+        <activity android:name=".activity.ChatActivity"></activity>
     </application>
 
 </manifest>

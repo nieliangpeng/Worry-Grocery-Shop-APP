@@ -396,7 +396,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_toStartOf="@+id/textView"
+                        android:layout_toStartOf="@+id/putOutTree"
                         android:src="@mipmap/xian" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -406,14 +406,14 @@
                         android:text="关注话题"
                         android:textColor="#909B11"
                         android:textStyle="bold"
-                        android:id="@+id/textView" />
+                        android:id="@+id/putOutTree" />
 
                     <ImageView
                         android:id="@+id/xian2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_toEndOf="@+id/textView"
+                        android:layout_toEndOf="@+id/putOutTree"
                         android:src="@mipmap/xian" />
 
                 </RelativeLayout>

@@ -17,12 +17,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.worrygroceryshop.R;
 import com.example.worrygroceryshop.adapter.FollowTypeAdapter;
 import com.example.worrygroceryshop.bean.FollowType;
 import com.example.worrygroceryshop.bean.User;
-import com.example.worrygroceryshop.common.GlideApp;
+//import com.example.worrygroceryshop.common.GlideApp;
 import com.example.worrygroceryshop.common.MyPathUrl;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,6 +58,8 @@ public class MyFragment extends Fragment {
     private TextView num3;
     private TextView num4;
     private TextView num5;
+    private RelativeLayout shu;
+    private RelativeLayout pen;
     private RelativeLayout teacher;
     private RelativeLayout shezhi;
     private GridView grid;
@@ -82,7 +85,7 @@ public class MyFragment extends Fragment {
               findViews(layout);
               //初始化我的主页
               initMy(userJson);
-
+              setListener1();
           }
         return layout;
 
@@ -97,7 +100,7 @@ public class MyFragment extends Fragment {
         User user = gson.fromJson(userJson, User.class);
         //根据当前的user对象更新页面
         //1.头像
-        GlideApp.with(MyFragment.this)
+        Glide.with(MyFragment.this)
                 .load(MyPathUrl.MyURL+"getHeader.action?user_phone="+user.getUser_phone())
                 .placeholder(R.mipmap.placeholder)
                 .error(R.mipmap.error)
@@ -105,6 +108,7 @@ public class MyFragment extends Fragment {
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(photo);
+
         //2.姓名
         user_name.setText(user.getUser_name());
         //3.普通用户or心灵大师
@@ -121,12 +125,21 @@ public class MyFragment extends Fragment {
         }
 
         //笔友个数
-        try {
-            List<String> usernames = EMClient.getInstance().contactManager().getAllContactsFromServer();
-            num1.setText(""+usernames.size());
-        } catch (HyphenateException e) {
-            e.printStackTrace();
-        }
+        new Thread(){
+            @Override
+            public void run() {
+                List<String> usernames = null;
+                try {
+                    usernames = EMClient.getInstance().contactManager().getAllContactsFromServer();
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+                num1.setText(""+usernames.size());
+            }
+        }.start();
+
+
+
         //关注的人数
         num2.setText(""+user.getFollow_num());
         //收藏帖子的个数
@@ -173,14 +186,21 @@ public class MyFragment extends Fragment {
         about=layout.findViewById(R.id.about);
         kfphone=layout.findViewById(R.id.kfphone);
         fankui=layout.findViewById(R.id.fankui);
+        shu=layout.findViewById(R.id.shu);
+        pen=layout.findViewById(R.id.pen);
     }
 
     private void setListener() {
         Listener listener=new Listener();
         register.setOnClickListener(listener);
         login.setOnClickListener(listener);
-    }
 
+    }
+    private void setListener1() {
+        Listener listener=new Listener();
+        shu.setOnClickListener(listener);
+        pen.setOnClickListener(listener);
+    }
     private void getViews(View layout) {
         register=layout.findViewById(R.id.register);
         login=layout.findViewById(R.id.login);
@@ -195,14 +215,23 @@ public class MyFragment extends Fragment {
     class Listener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
+            Intent intent;
             switch (v.getId()){
                 case R.id.register:
-                    Intent intent=new Intent(context, RegisterActivity.class);
+                    intent=new Intent(context, RegisterActivity.class);
                     startActivityForResult(intent,1);
                     break;
                 case R.id.login:
-                    Intent i=new Intent(context, LoginActivity.class);
-                    startActivity(i);
+                    intent=new Intent(context, LoginActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.shu:
+                    intent=new Intent(context,MyTreeHolesActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.pen:
+                    //跳转到好友列表界面
+                    startActivity(new Intent(context,PenFriendActivity.class));
                     break;
             }
         }

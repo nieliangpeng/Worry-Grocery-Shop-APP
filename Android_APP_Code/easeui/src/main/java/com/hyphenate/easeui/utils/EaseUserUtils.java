@@ -4,6 +4,9 @@ import android.content.Context;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//import com.bumptech.glide.Glide;
+//import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.hyphenate.easeui.R;
@@ -47,6 +50,7 @@ public class EaseUserUtils {
             }
         }else{
             Glide.with(context).load(R.drawable.ease_default_avatar).into(imageView);
+
         }
     }
     

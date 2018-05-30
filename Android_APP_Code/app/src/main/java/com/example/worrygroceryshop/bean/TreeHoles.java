@@ -1,10 +1,11 @@
 package com.example.worrygroceryshop.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class TreeHoles {
+public class TreeHoles implements Serializable{
 	private int letter_id;
 	private User user;
 	private String letter_content;

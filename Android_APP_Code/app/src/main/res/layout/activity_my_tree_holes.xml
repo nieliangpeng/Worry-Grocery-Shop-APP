@@ -14,12 +14,12 @@
         >
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/putOutTree"
             android:layout_width="match_parent"
             android:layout_height="50dp"
 
             android:gravity="center"
-            android:text="我的信件"
+            android:text="我的树洞"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="20sp"

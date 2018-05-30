@@ -9,11 +9,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.worrygroceryshop.R;
 import com.example.worrygroceryshop.bean.FollowType;
 import com.example.worrygroceryshop.bean.InvtType;
-import com.example.worrygroceryshop.common.GlideApp;
+//import com.example.worrygroceryshop.common.GlideApp;
 import com.example.worrygroceryshop.common.MyPathUrl;
 
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class FollowTypeAdapter extends BaseAdapter {
         final FollowType followType = followTypeList.get(position);
         final InvtType invtType=followType.getInvtType();
         //加载图片
-        GlideApp.with(context)
+        Glide.with(context)
                 .load(MyPathUrl.MyURL+"getTypeImage.action?type_id="+invtType.getType_id())
                 .placeholder(R.mipmap.placeholder)
                 .error(R.mipmap.error)
