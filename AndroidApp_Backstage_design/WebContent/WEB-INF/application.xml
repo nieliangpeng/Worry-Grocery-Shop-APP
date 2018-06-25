@@ -51,7 +51,7 @@
                   <value>com/sky/Bean/Follow.hbm.xml</value>
                   <value>com/sky/Bean/FollowType.hbm.xml</value>
                   <value>com/sky/Bean/GetLetter.hbm.xml</value>
-                  <value>com/sky/Bean/Image.hbm.xml</value>
+               
                   <value>com/sky/Bean/Invitation.hbm.xml</value>
                   <value>com/sky/Bean/InvtType.hbm.xml</value>
                    <value>com/sky/Bean/Joke.hbm.xml</value>
@@ -62,7 +62,9 @@
                   <value>com/sky/Bean/TreeHoles.hbm.xml</value>
                   <value>com/sky/Bean/User.hbm.xml</value>
                   <value>com/sky/Bean/Video.hbm.xml</value>
-                   <value>com/sky/Bean/VoiceScream.hbm.xml</value>
+                  <value>com/sky/Bean/VoiceScream.hbm.xml</value>
+                   <value>com/sky/Bean/Mmsic.hbm.xml</value>
+                  <value>com/sky/Bean/Word.hbm.xml</value>
                  
                </list>
             </property>

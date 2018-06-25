@@ -6,8 +6,8 @@ public class Video {
 	private int video_id;
 	private String video_fileName;
 	private String video_resource;
-	private Date video_time;
-	private int good_num;
+	private String video_time;
+	
 	public int getVideo_id() {
 		return video_id;
 	}
@@ -26,17 +26,11 @@ public class Video {
 	public void setVideo_resource(String video_resource) {
 		this.video_resource = video_resource;
 	}
-	public Date getVideo_time() {
+	public String getVideo_time() {
 		return video_time;
 	}
-	public void setVideo_time(Date video_time) {
+	public void setVideo_time(String video_time) {
 		this.video_time = video_time;
-	}
-	public int getGood_num() {
-		return good_num;
-	}
-	public void setGood_num(int good_num) {
-		this.good_num = good_num;
 	}
 	
 }

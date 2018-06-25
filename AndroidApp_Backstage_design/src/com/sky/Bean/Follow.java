@@ -23,6 +23,10 @@ public class Follow {
 	public void setUser_id_B(int user_id_B) {
 		this.user_id_B = user_id_B;
 	}
+	@Override
+	public String toString() {
+		return "Follow [FL_id=" + FL_id + ", userA=" + userA + ", user_id_B=" + user_id_B + "]";
+	}
 	
 	
 }

@@ -1,10 +1,11 @@
 package com.example.worrygroceryshop.bean;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 //帖子的类型,话题
-public class InvtType {
+public class InvtType implements Serializable{
 	private int type_id;
 	private String type_name;
 	private String type_image;

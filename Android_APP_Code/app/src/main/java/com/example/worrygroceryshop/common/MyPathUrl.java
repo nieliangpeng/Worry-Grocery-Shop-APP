@@ -5,5 +5,5 @@ package com.example.worrygroceryshop.common;
  */
 
 public class MyPathUrl {
-    public static String MyURL="http://10.7.85.250:8080/AndroidApp_Backstage_design/";
+    public static String MyURL="http://10.7.85.233:8080/AndroidApp_Backstage_design/";
 }

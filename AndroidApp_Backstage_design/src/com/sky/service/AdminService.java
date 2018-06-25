@@ -21,7 +21,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.sky.Bean.Admin;
+
 import com.sky.Dao.AdminDao;
+
 
 
 
@@ -138,8 +140,7 @@ public class AdminService {
 		// TODO Auto-generated method stub
 		return adminDao.updateAdminPassword(telephone,newPassword);
 	}
-	
-	
+
 	
 	
 	

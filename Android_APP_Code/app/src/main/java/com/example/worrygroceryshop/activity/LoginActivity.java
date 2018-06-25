@@ -241,7 +241,6 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess() {
                             Log.i("im","环信登录成功");
-
                         }
 
                         @Override

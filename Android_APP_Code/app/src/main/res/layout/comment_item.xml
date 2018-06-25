@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:civ_border_color="#a17979"
+            app:civ_border_width="1dp"
+            android:src="@mipmap/photo"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/user_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="5dp"
+                   android:text="你的名字"
+                   android:textColor="@color/black_deep"
+                   android:textSize="14sp"
+                   />
+               <ImageView
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="5dp"
+                   android:src="@mipmap/zuanshi"/>
+           </LinearLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="2018-06-12 11:01"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingExtra="5dp"
+        android:text="保持淡定！！！保持淡定！！！保持淡定！！！保持淡定！！！保持淡定！！！保持淡定！！！"
+        android:textColor="@color/black_deep"
+        android:textSize="15sp" />
+    <!--<ImageView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@mipmap/pic"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/huihua"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/discuss"
+                android:layout_marginRight="20dp"/>
+
+            <ImageButton
+                android:id="@+id/dianzan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/good_f" />
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12W"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

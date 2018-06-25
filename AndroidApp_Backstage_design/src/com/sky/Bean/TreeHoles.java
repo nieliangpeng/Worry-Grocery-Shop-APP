@@ -8,10 +8,10 @@ public class TreeHoles {
 	private int letter_id;
 	private User user;
 	private String letter_content;
-	private Date letter_time;
+	private String letter_time;
 	private String isShowInTheTree;
-	private Set letterReplySet=new HashSet<LetterReply>();
-	private Set getLetterSet=new HashSet<GetLetter>();
+	private Set <LetterReply>letterReplySet=new HashSet<LetterReply>();
+	private Set <GetLetter>getLetterSet=new HashSet<GetLetter>();
 	
 	public Set getGetLetterSet() {
 		return getLetterSet;
@@ -43,10 +43,10 @@ public class TreeHoles {
 	public void setLetter_content(String letter_content) {
 		this.letter_content = letter_content;
 	}
-	public Date getLetter_time() {
+	public String getLetter_time() {
 		return letter_time;
 	}
-	public void setLetter_time(Date letter_time) {
+	public void setLetter_time(String letter_time) {
 		this.letter_time = letter_time;
 	}
 	public String getIsShowInTheTree() {
@@ -55,5 +55,12 @@ public class TreeHoles {
 	public void setIsShowInTheTree(String isShowInTheTree) {
 		this.isShowInTheTree = isShowInTheTree;
 	}
+	@Override
+	public String toString() {
+		return "TreeHoles [letter_id=" + letter_id + ", user=" + user + ", letter_content=" + letter_content
+				+ ", letter_time=" + letter_time + ", isShowInTheTree=" + isShowInTheTree + ", letterReplySet="
+				+ letterReplySet + ", getLetterSet=" + getLetterSet + "]";
+	}
+	
 	
 }

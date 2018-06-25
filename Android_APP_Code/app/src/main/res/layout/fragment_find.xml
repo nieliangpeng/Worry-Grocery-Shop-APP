@@ -1,10 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d9c8c8"
+    android:layout_marginBottom="50dp">
+    <LinearLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DDAFAF">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="发现"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#fff"
+    android:layout_marginTop="2dp">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/zt"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+
     <TextView
-        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="通知"
+        android:textAlignment="center"
+        android:textColor="#DDAFAF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/tongzhi1"/>
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="34dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/im" />
+
+        <ImageButton
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="发现"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="34dp"
+        android:visibility="invisible"
+        android:src="@mipmap/i"
+        android:background="@android:color/transparent"/>
+
+        <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="34dp"
+        android:src="@mipmap/ii"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"/>
+
+        <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="34dp"
+        android:src="@mipmap/iii"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"/>
+
+        <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="34dp"
+        android:src="@mipmap/iiii"
+        android:visibility="invisible"
+        android:background="@android:color/transparent" />
+    </RelativeLayout>
 </LinearLayout>

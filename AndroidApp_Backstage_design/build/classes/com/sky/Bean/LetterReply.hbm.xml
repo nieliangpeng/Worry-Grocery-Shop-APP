@@ -6,9 +6,9 @@
 		<id name="letter_reply_id" column="letter_reply_id">
 			<generator class="increment" />
 		</id>
+		<property name="user_id"/>
 		<property name="letter_content" />
-		<property name="letter_time" />
-		<many-to-one name="user" column="user_id" class="User" lazy="false"/>
+		<property name="letter_time" />	
 		<many-to-one name="letter" column="letter_id" class="TreeHoles" lazy="false"/>
 	</class>
 </hibernate-mapping>

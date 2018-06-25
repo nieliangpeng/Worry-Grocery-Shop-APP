@@ -12,8 +12,9 @@ import com.example.worrygroceryshop.R;
 public class MoreActivity extends AppCompatActivity {
     private RelativeLayout bigteacher;
     private RelativeLayout shut;
-    private RelativeLayout worde;
+
     private RelativeLayout tree;
+    private RelativeLayout music;
     private ImageView image5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +28,18 @@ public class MoreActivity extends AppCompatActivity {
         ClickListener listener=new ClickListener();
         image5.setOnClickListener(listener);
         tree.setOnClickListener(listener);
+        music.setOnClickListener(listener);
+        shut.setOnClickListener(listener);
+        bigteacher.setOnClickListener(listener);
     }
 
     private void findViews() {
         bigteacher=findViewById(R.id.bigteacher);
         shut=findViewById(R.id.shut);
-        worde=findViewById(R.id.worde);
+
         tree=findViewById(R.id.tree);
         image5=findViewById(R.id.image5);
+        music=findViewById(R.id.music);
     }
     class ClickListener implements View.OnClickListener{
 
@@ -48,6 +53,20 @@ public class MoreActivity extends AppCompatActivity {
                     break;
                 case R.id.tree:
                     intent=new Intent(MoreActivity.this,TreeHolesActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.music:
+                    intent=new Intent(MoreActivity.this,MusicActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.shut:
+                    //跳转到呐喊首页
+                    intent=new Intent(MoreActivity.this,ShutActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.bigteacher:
+                    //跳转到心灵大师页面
+                    intent=new Intent(MoreActivity.this,BigTeacherActivity.class);
                     startActivity(intent);
                     break;
             }

@@ -10,7 +10,6 @@
 		<property name="user_pwd" />
 		<property name="user_phone" />
 		<property name="user_desc" />
-		
 		<property name="user_image" />
 		<property name="user_state" />
 		<property name="master_profile" />
@@ -24,12 +23,12 @@
 			<key column="user_id_A" />
 			<one-to-many class="Follow" />
 		</set>
-		<set name="followTypeSet" cascade="delete" inverse="true" lazy="false" >
+		<set name="followTypeSet" cascade="all" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="FollowType" />
 		</set>
 		
-		<set name="invitationSet" cascade="delete" inverse="true" lazy="false" >
+		<set name="invitationSet" cascade="all" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="Invitation" />
 		</set>
@@ -37,22 +36,16 @@
 			<key column="user_id" />
 			<one-to-many class="Collect" />
 		</set>
-		<set name="commentSet" cascade="delete" inverse="true" lazy="false" >
-			<key column="user_id" />
-			<one-to-many class="Comment" />
-		</set>
+	
 		<set name="replySet" cascade="delete" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="Reply" />
 		</set>
-		<set name="letterSet" cascade="delete" inverse="true" lazy="false" >
+		<set name="letterSet" cascade="all" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="TreeHoles" />
 		</set>
-		<set name="letterReplySet" cascade="delete" inverse="true" lazy="false" >
-			<key column="user_id" />
-			<one-to-many class="LetterReply" />
-		</set>
+
 		<set name="getLetterSet" cascade="delete" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="GetLetter" />
@@ -61,7 +54,7 @@
 			<key column="user_id" />
 			<one-to-many class="VoiceScream" />
 		</set>
-		<set name="textShoutSet" cascade="delete" inverse="true" lazy="false" >
+		<set name="textShoutSet" cascade="all" inverse="true" lazy="false" >
 			<key column="user_id" />
 			<one-to-many class="TextShout" />
 		</set>

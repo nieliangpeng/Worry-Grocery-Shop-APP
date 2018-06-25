@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.0.aar\\dc4fac1b74e838adde1bf310c40fb3bc\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.0.aar\\dc4fac1b74e838adde1bf310c40fb3bc\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.0.aar\\dc4fac1b74e838adde1bf310c40fb3bc\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\35c46819df77d881963157bd25658c39\\res\\color\\abc_primary_text_material_light.xml"
+    }
+]

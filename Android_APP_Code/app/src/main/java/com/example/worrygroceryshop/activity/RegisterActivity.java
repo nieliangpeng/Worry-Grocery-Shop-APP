@@ -145,7 +145,7 @@ public class RegisterActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.user_image:
                     Intent imageIntent = new Intent(Intent.ACTION_PICK,
-                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(imageIntent, IMAGE);
                     break;
                 case R.id.getValidateCode:
@@ -175,12 +175,19 @@ public class RegisterActivity extends AppCompatActivity {
                                 if(pwd.equals(repwd)){
                                     if(!phone1.equals("")){
                                         if(phone1.length()==11){
-                                            if(!code.equals("")){
-                                                submitCode("86",phone1,code);
-                                            }else{
-                                                Toast.makeText(RegisterActivity.this,"请输入手机验证码",Toast.LENGTH_SHORT).show();
-
-                                            }
+//                                            if(!code.equals("")){
+//                                                submitCode("86",phone1,code);
+//                                            }else{
+//                                                Toast.makeText(RegisterActivity.this,"请输入手机验证码",Toast.LENGTH_SHORT).show();
+//
+//                                            }
+                                            new Thread(){
+                                                @Override
+                                                public void run() {
+                                                    registerUser(imagePath,name,pwd, phone1);
+//                                                  Log.i("app","完成");
+                                                }
+                                            }.start();
                                         }else{
                                             Toast.makeText(RegisterActivity.this,"请输入有效的手机号码",Toast.LENGTH_SHORT).show();
                                         }
@@ -248,15 +255,18 @@ public class RegisterActivity extends AppCompatActivity {
 
                 } else{
                     // TODO 处理错误的结果
-                      Log.i("app","获取验证码失败");
+                    ((Throwable)data).printStackTrace();
+                    String str = data.toString();
+
+                      Log.i("app","获取验证码失败"+str);
                     message.what = 2;
                 }
                 handler.sendMessage(message);
             }
         });
         // 触发操作
-        Log.i("app","触发操作");
-        SMSSDK.getVerificationCode(country, phone);
+        Log.i("app","触发操作"+phone);
+        SMSSDK.getVerificationCode(country,phone);
     }
 
     // 提交验证码，其中的code表示验证码，如“1357”

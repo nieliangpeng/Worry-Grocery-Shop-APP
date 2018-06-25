@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.worrygroceryshop.activity.GetALetterActivity"
     android:orientation="vertical"
-    android:background="@mipmap/treehole_get_ltter_bkgd">
+    >
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#7fddafaf">
+        android:background="#DDAFAF">
 
         <TextView
             android:id="@+id/textView"
@@ -42,11 +42,11 @@
         android:id="@+id/watchTheLetter"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:background="@drawable/shape7"
+        android:background="@drawable/shape20"
         android:text="拆   信"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="#6666ff"
+        android:textColor="#fff"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"/>
 </LinearLayout>

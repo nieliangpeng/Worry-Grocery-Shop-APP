@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="375dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#CFCFCF">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@mipmap/header"
+        app:civ_border_color="#a17979"
+        app:civ_border_width="2dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="小闫的春天"
+        android:textColor="@color/emojicon_tab_nomal"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/master_profile"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="专治各种疑难杂症，专治不开心，专治闫佳成各种不服"
+        android:textColor="@color/btn_pressed_green_solid"
+        android:textSize="18dp"
+        android:textStyle="normal" />
+</LinearLayout>

@@ -20,15 +20,14 @@ android {
 
 // 在MobSDK的扩展中注册SMSSDK的相关信息
 MobSDK {
-    appKey "25f80dcc84f7e"
-    appSecret "7e2693bbf4d7934d0bd8125cf7f6aa89"
+    appKey "26879154ca15c"
+    appSecret "725997d60d63a8297ebd5ecaa09ceb89"
 
     SMSSDK {}
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
@@ -38,12 +37,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':easeui')
-
     implementation 'com.google.code.gson:gson:2.8.0'
-
-
-
-
+    implementation files('libs/fastjson-1.2.47.jar')
+    implementation files('libs/showapi_sdk.jar')
 }
 
 

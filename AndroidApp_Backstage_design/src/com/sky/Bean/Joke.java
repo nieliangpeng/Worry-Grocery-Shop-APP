@@ -15,5 +15,9 @@ public class Joke {
 	public void setJoke_content(String joke_content) {
 		this.joke_content = joke_content;
 	}
+	@Override
+	public String toString() {
+		return "Joke [joke_id=" + joke_id + ", joke_content=" + joke_content + "]";
+	}
 	
 }

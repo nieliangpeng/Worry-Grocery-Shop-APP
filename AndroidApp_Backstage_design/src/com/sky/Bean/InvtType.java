@@ -5,7 +5,7 @@ import java.util.Set;
 
 //帖子的类型,话题
 public class InvtType {
-	private int type_id;
+	private Integer type_id;
 	private String type_name;
 	private String type_image;
 	private String type_desc;
@@ -24,10 +24,10 @@ public class InvtType {
 	public void setFollowTypeSet(Set followTypeSet) {
 		this.followTypeSet = followTypeSet;
 	}
-	public int getType_id() {
+	public Integer getType_id() {
 		return type_id;
 	}
-	public void setType_id(int type_id) {
+	public void setType_id(Integer type_id) {
 		this.type_id = type_id;
 	}
 	public String getType_name() {
@@ -47,6 +47,12 @@ public class InvtType {
 	}
 	public void setType_desc(String type_desc) {
 		this.type_desc = type_desc;
+	}
+	@Override
+	public String toString() {
+		return "InvtType [type_id=" + type_id + ", type_name=" + type_name + ", type_image=" + type_image
+				+ ", type_desc=" + type_desc 
+				+ "]";
 	}
 	
 	

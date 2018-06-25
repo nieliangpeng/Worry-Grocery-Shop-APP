@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import com.sky.Bean.Admin;
 
 
+
 @Repository
 public class AdminDao {
 	@Autowired

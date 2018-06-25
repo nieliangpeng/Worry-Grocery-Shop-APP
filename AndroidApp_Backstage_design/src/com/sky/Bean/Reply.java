@@ -30,5 +30,10 @@ public class Reply {
 	public void setReply_content(String reply_content) {
 		this.reply_content = reply_content;
 	}
+	@Override
+	public String toString() {
+		return "Reply [reply_id=" + reply_id + ", comment=" + comment + ", user=" + user + ", reply_content="
+				+ reply_content + "]";
+	}
 	
 }

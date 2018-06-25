@@ -10,7 +10,7 @@
         android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@mipmap/pagebg">
+        android:background="@mipmap/pagebg1">
         <!--头部返回-->
         <RelativeLayout
             android:id="@+id/parent1"
@@ -70,7 +70,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/zuanshi"
                 android:text="普通用户"
-                android:textColor="#0000FF"
+                android:textColor="@color/btn_pressed_green_solid"
                 android:textSize="10sp" />
 
             <TextView
@@ -119,7 +119,7 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:text="这家伙很懒，没留下足迹。"
-                    android:textColor="#909B11" />
+                    android:textColor="#DDAFAF" />
 
             </RelativeLayout>
 
@@ -162,7 +162,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="0" />
 
             <TextView
@@ -171,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="笔友" />
         </RelativeLayout>
 
@@ -191,7 +191,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="0" />
 
             <TextView
@@ -200,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="关注的人" />
         </RelativeLayout>
 
@@ -221,7 +221,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="0" />
 
             <TextView
@@ -230,7 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="收藏" />
         </RelativeLayout>
 
@@ -249,7 +249,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="0" />
 
             <TextView
@@ -258,7 +258,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="帖子" />
         </RelativeLayout>
 
@@ -278,7 +278,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="0" />
 
             <TextView
@@ -288,7 +288,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:textSize="14sp"
-                android:textColor="#909B11"
+                android:textColor="#DDAFAF"
                 android:text="树洞信封" />
         </RelativeLayout>
 
@@ -328,7 +328,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_toEndOf="@+id/imageView3"
                     android:text="申请心灵大师"
-                    android:textColor="#909B11" />
+                    android:textColor="#DDAFAF" />
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -367,7 +367,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_toEndOf="@+id/i1"
                     android:text="设置"
-                    android:textColor="#909B11" />
+                    android:textColor="#DDAFAF" />
                 <ImageView
                     android:id="@+id/i3"
                     android:layout_width="15dp"
@@ -382,7 +382,7 @@
             <!--关注话题-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/shape5">
                 <!--话题-->
                 <RelativeLayout
@@ -404,7 +404,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="关注话题"
-                        android:textColor="#909B11"
+                        android:textColor="#DDAFAF"
                         android:textStyle="bold"
                         android:id="@+id/putOutTree" />
 
@@ -425,7 +425,9 @@
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/topic"
                     android:horizontalSpacing="1dp"
-                    android:numColumns="5">
+                    android:numColumns="4"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp">
 
                 </GridView>
             </RelativeLayout>
@@ -452,7 +454,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_toEndOf="@+id/i2"
                     android:text="关于我们"
-                    android:textColor="#13227a" />
+                    android:textColor="#DDAFAF" />
                 <ImageView
                     android:id="@+id/i4"
                     android:layout_width="15dp"
@@ -461,7 +463,7 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="15dp"
-                    android:src="@mipmap/back_b" />
+                    android:src="@mipmap/back_g" />
             </RelativeLayout>
 
             <!--客服电话-->
@@ -487,7 +489,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_toEndOf="@+id/i5"
                     android:text="客服电话"
-                    android:textColor="#13227a" />
+                    android:textColor="#DDAFAF" />
                 <ImageView
                     android:id="@+id/i6"
                     android:layout_width="15dp"
@@ -496,7 +498,7 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="15dp"
-                    android:src="@mipmap/back_b" />
+                    android:src="@mipmap/back_g" />
             </RelativeLayout>
             <!--意见反馈-->
             <RelativeLayout
@@ -521,7 +523,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_toEndOf="@+id/i7"
                     android:text="意见反馈"
-                    android:textColor="#13227a" />
+                    android:textColor="#DDAFAF" />
                 <ImageView
                     android:id="@+id/i8"
                     android:layout_width="15dp"
@@ -530,7 +532,7 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="15dp"
-                    android:src="@mipmap/back_b" />
+                    android:src="@mipmap/back_g" />
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

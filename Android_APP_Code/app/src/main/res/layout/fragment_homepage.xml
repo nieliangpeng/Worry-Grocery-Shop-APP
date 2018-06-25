@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="50dp">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -29,4 +31,28 @@
             android:src="@mipmap/more"
             android:background="@android:color/transparent" />
     </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <android.support.v4.app.FragmentTabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#ded3d3">
+                </TabWidget>
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </FrameLayout>
+
+            </android.support.v4.app.FragmentTabHost>
+    </LinearLayout>
 </LinearLayout>

@@ -7,19 +7,21 @@
     android:orientation="vertical"
     android:background="#F5F5F5"
     tools:context="com.example.worrygroceryshop.activity.LookReplyLetterActivity">
+
     <FrameLayout
         android:id="@+id/titele"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:background="#DDAFAF">
+
         <ImageView
             android:id="@+id/back"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="5dp"
-            android:src="@mipmap/back"
-            android:background="@android:color/transparent" />
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back" />
 
         <ImageView
             android:id="@+id/deleteReplyLetter"
@@ -29,6 +31,7 @@
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
             android:src="@mipmap/delete_letter" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -37,7 +40,7 @@
             android:text="详情"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </FrameLayout>
     <!--用户名-->
@@ -45,7 +48,7 @@
         android:id="@+id/from"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@mipmap/letter_bkgd">
+        android:background="#fff">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -58,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="来自：#"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <!--设置用户名-->
@@ -67,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="一颗豆Zi"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -75,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="#"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -90,13 +93,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="518dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@mipmap/letter_bkgd">
+        android:background="@mipmap/ss12">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="518dp">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,8 +110,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="  信的内容"
-                    android:textColor="#000000"
+                    android:text="  信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容信的内容"
+                    android:textColor="@color/black_deep"
                     android:textSize="18dp" />
 
                 <TextView
@@ -116,9 +119,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginLeft="170dp"
+                    android:layout_marginLeft="180dp"
                     android:text="2018-5-23 16:24:41"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black_deep"
                     android:textSize="18dp"
                     android:textStyle="bold" />
             </LinearLayout>

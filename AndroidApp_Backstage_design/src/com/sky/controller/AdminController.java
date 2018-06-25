@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.sky.Bean.Admin;
+
 import com.sky.service.AdminService;
 
 @Controller
@@ -151,5 +152,6 @@ public class AdminController {
 			request.setAttribute("updateAdminPwd","<script>alert('更新密码失败');</script>");
 			return "adminUpdatePwd";
 		}
-	}	
+	}
+	
 }

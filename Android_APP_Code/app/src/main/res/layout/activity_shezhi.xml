@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dfd1d1"
+    tools:context="com.example.worrygroceryshop.activity.ShezhiActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DDAFAF">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="设置"
+            android:layout_marginRight="15dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="账号管理"
+            android:textColor="#DDAFAF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageView4"
+            android:src="@mipmap/photo"
+            app:civ_border_color="#a17979"
+            app:civ_border_width="2dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/back_g" />
+    </RelativeLayout>
+
+</LinearLayout>

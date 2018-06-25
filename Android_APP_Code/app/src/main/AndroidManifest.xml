@@ -118,14 +118,101 @@
         <activity
             android:name=".activity.ReturnIntoTreeHolesSuccessfulActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.ReplyLetterActivity" />
-        <activity android:name=".activity.ReplyLetterSuccessfulActivity" />
-        <activity android:name=".activity.MyReplyLetterItemActivity" />
-        <activity android:name=".activity.LookReplyLetterActivity" />
-        <activity android:name=".activity.deleteReplyLetterSuccessfulActivity" />
-        <activity android:name=".activity.PenFriendHomePageActivity" />
-        <activity android:name=".activity.PenFriendActivity" />
-        <activity android:name=".activity.ChatActivity"></activity>
+        <activity
+            android:name=".activity.ReplyLetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReplyLetterSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyReplyLetterItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LookReplyLetterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.deleteReplyLetterSuccessfulActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PenFriendHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PenFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.JokActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShezhiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TextShutActivity"
+            android:screenOrientation="portrait" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".activity.TextShoutSuccessfulActivity"
+            android:screenOrientation="portrait" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.AccountManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BigTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BigTeacherDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GetABigTeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyInvitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvitationDetailActivity"
+            android:screenOrientation="portrait">
+
+             <!--<intent-filter> -->
+             <!--<action android:name="android.intent.action.MAIN" /> -->
+
+
+             <!--<category android:name="android.intent.category.LAUNCHER" /> -->
+             <!--</intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.OrderByInvtTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PostActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.InfomationActivity" android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>

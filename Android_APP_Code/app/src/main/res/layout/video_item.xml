@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp">
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layerType="hardware"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    </WebView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/videoname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape21"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="腾讯视频"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/videoname1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape21"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="PAPI酱"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/videotime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/shape21"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:text="2018年5月12日"
+            android:textColor="@color/bottom_text_color_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/videoname"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="150dp"-->
+        <!--android:text="来源：腾讯视频-PAPI酱"-->
+        <!--android:textColor="@color/btn_gray_pressed"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/videotime"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="230dp"-->
+        <!--android:text="2018年5月12日"-->
+        <!--android:textColor="@color/btn_gray_pressed"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_marginTop="10dp"/>-->
+</LinearLayout>

@@ -9,7 +9,7 @@
 		<property name="type_name" />
 		<property name="type_image" />
 		<property name="type_desc" />
-		<set name="followTypeSet" cascade="delete" inverse="true" lazy="false" >
+		<set name="followTypeSet" cascade="all" inverse="true" lazy="false" >
 			<key column="type_id" />
 			<one-to-many class="FollowType" />
 		</set>

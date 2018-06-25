@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/type_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:civ_border_color="@color/btn_pressed_green_solid"
+        app:civ_border_width="1dp"
+        android:src="@mipmap/header"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="#温暖你的世界#"
+        android:textAlignment="center"
+        android:textColor="@color/btn_pressed_green_solid" />
+</LinearLayout>

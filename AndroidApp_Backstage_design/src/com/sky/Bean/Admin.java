@@ -43,5 +43,11 @@ public class Admin {
 	public void setAdmin_validatecode(String admin_validatecode) {
 		this.admin_validatecode = admin_validatecode;
 	}
+	@Override
+	public String toString() {
+		return "Admin [admin_id=" + admin_id + ", admin_phone=" + admin_phone + ", admin_pwd=" + admin_pwd
+				+ ", admin_name=" + admin_name + ", admin_header=" + admin_header + ", admin_validatecode="
+				+ admin_validatecode + "]";
+	}
 	
 }

@@ -6,7 +6,7 @@ public class GetLetter {
 	private int gl_id;
 	private User user;
 	private TreeHoles letter;
-	private Date gl_time;
+	private String gl_time;
 	
 	public int getGl_id() {
 		return gl_id;
@@ -26,11 +26,16 @@ public class GetLetter {
 	public void setLetter(TreeHoles letter) {
 		this.letter = letter;
 	}
-	public Date getGl_time() {
+	public String getGl_time() {
 		return gl_time;
 	}
-	public void setGl_time(Date gl_time) {
+	public void setGl_time(String gl_time) {
 		this.gl_time = gl_time;
 	}
+	@Override
+	public String toString() {
+		return "GetLetter [gl_id=" + gl_id + ", user=" + user + ", letter=" + letter + ", gl_time=" + gl_time + "]";
+	}
+	
 	
 }

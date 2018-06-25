@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c6115042de03db2e6a4e5c84cce0ea19\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c6115042de03db2e6a4e5c84cce0ea19\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c6115042de03db2e6a4e5c84cce0ea19\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\androidStudio\\MYAPP\\Worry-Grocery-Shop-APP\\Android_APP_Code\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\夏天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c6115042de03db2e6a4e5c84cce0ea19\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

@@ -3,6 +3,8 @@ package com.example.worrygroceryshop.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,25 +18,35 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.worrygroceryshop.R;
 import com.example.worrygroceryshop.adapter.FollowTypeAdapter;
 import com.example.worrygroceryshop.bean.FollowType;
+import com.example.worrygroceryshop.bean.InvtType;
 import com.example.worrygroceryshop.bean.User;
 //import com.example.worrygroceryshop.common.GlideApp;
 import com.example.worrygroceryshop.common.MyPathUrl;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * Created by 夏天 on 2018/5/17.
@@ -60,6 +72,7 @@ public class MyFragment extends Fragment {
     private TextView num5;
     private RelativeLayout shu;
     private RelativeLayout pen;
+    private RelativeLayout tie;
     private RelativeLayout teacher;
     private RelativeLayout shezhi;
     private GridView grid;
@@ -67,6 +80,30 @@ public class MyFragment extends Fragment {
     private RelativeLayout kfphone;
     private RelativeLayout fankui;
     private SharedPreferences preferences;
+    private List<String> usernames = new ArrayList<>();
+    private List<InvtType> dataList=new ArrayList<>();
+    private FollowTypeAdapter followTypeAdapter;
+    private User user;
+    Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    num1.setText(""+usernames.size());
+                    break;
+                case 10:
+                    Toast.makeText(context,"连接失败",Toast.LENGTH_SHORT).show();
+                    break;
+                case 11:
+                    Toast.makeText(context,"获取数据失败",Toast.LENGTH_SHORT).show();
+                    break;
+                case 12:
+                    followTypeAdapter.refresh(dataList);
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    };
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -97,7 +134,7 @@ public class MyFragment extends Fragment {
                 .serializeNulls()
                 .setPrettyPrinting()
                 .create();
-        User user = gson.fromJson(userJson, User.class);
+        user = gson.fromJson(userJson, User.class);
         //根据当前的user对象更新页面
         //1.头像
         Glide.with(MyFragment.this)
@@ -128,13 +165,16 @@ public class MyFragment extends Fragment {
         new Thread(){
             @Override
             public void run() {
-                List<String> usernames = null;
+
                 try {
                     usernames = EMClient.getInstance().contactManager().getAllContactsFromServer();
                 } catch (HyphenateException e) {
                     e.printStackTrace();
                 }
-                num1.setText(""+usernames.size());
+                Message message = Message.obtain();
+                message.what = 1;
+                handler.sendMessage(message);
+
             }
         }.start();
 
@@ -149,22 +189,60 @@ public class MyFragment extends Fragment {
         //树洞信封数
         num5.setText(""+user.getLetter_num());
         //关注的话题
-        Set<FollowType> followTypeData=user.getFollowTypeSet();
-        if(followTypeData.size()!=0){
-            List<FollowType> followTypeList=new ArrayList<FollowType>();
-            for(FollowType followType : followTypeData){
-                followTypeList.add(followType);
+        followTypeAdapter=new FollowTypeAdapter(context,dataList, R.layout.fragment_mypage_item,new int[]{R.id.type_image, R.id.type_name});
+        grid.setAdapter(followTypeAdapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //点击跳转到话题详情帖子页
+                InvtType invtType=(InvtType) parent.getAdapter().getItem(position);//话题信息
+                Intent intent=new Intent(context,OrderByInvtTypeActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("invtType",invtType);
+                intent.putExtra("bundle",bundle);
+                startActivity(intent);
             }
-            FollowTypeAdapter followTypeAdapter=new FollowTypeAdapter(context,followTypeList, R.layout.fragment_mypage_item,new int[]{R.id.type_image, R.id.type_name});
-            grid.setAdapter(followTypeAdapter);
-            grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    //点击跳转到话题详情帖子页
+        });
+        OkHttpClient okHttpClient = new OkHttpClient();
+        FormBody.Builder builder = new FormBody.Builder();
+        builder.add("user_id",user.getUser_id()+"");
+        FormBody body = builder.build();
+        final Request request = new Request.Builder().post(body)
+                .url(MyPathUrl.MyURL+"getFollowType.action").build();
+        final Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.i("app","连接失败");
+                Log.i("错误信息",e.getMessage());
+                Message message = Message.obtain();
+                message.what = 10;
+                handler.sendMessage(message);
+            }
 
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                Log.i("app","连接成功");
+                String data=response.body().string();
+                if(data!=null){
+                    Log.i("json串",data);
+                    Gson gson = new GsonBuilder()
+                            .serializeNulls()
+                            .setPrettyPrinting()
+                            .create();
+                    dataList=gson.fromJson(data, new TypeToken<List<InvtType>>(){}.getType());
+                    Message message = Message.obtain();
+                    message.what = 12;
+                    handler.sendMessage(message);
+                }else{
+                    Message message = Message.obtain();
+                    message.what = 11;
+                    handler.sendMessage(message);
                 }
-            });
-        }
+            }
+        });
+
+
     }
 
     private void findViews(View layout) {
@@ -188,6 +266,7 @@ public class MyFragment extends Fragment {
         fankui=layout.findViewById(R.id.fankui);
         shu=layout.findViewById(R.id.shu);
         pen=layout.findViewById(R.id.pen);
+        tie=layout.findViewById(R.id.tie);
     }
 
     private void setListener() {
@@ -200,6 +279,10 @@ public class MyFragment extends Fragment {
         Listener listener=new Listener();
         shu.setOnClickListener(listener);
         pen.setOnClickListener(listener);
+        shezhi.setOnClickListener(listener);
+        teacher.setOnClickListener(listener);
+        tie.setOnClickListener(listener);
+        my.setOnClickListener(listener);
     }
     private void getViews(View layout) {
         register=layout.findViewById(R.id.register);
@@ -232,6 +315,22 @@ public class MyFragment extends Fragment {
                 case R.id.pen:
                     //跳转到好友列表界面
                     startActivity(new Intent(context,PenFriendActivity.class));
+                    break;
+                case R.id.shezhi:
+                    //跳转到设置界面
+                    startActivity(new Intent(context,ShezhiActivity.class));
+                    break;
+                case R.id.teacher:
+                    startActivity(new Intent(context,GetABigTeacherActivity.class));
+                    break;
+                case R.id.tie:
+                    startActivity(new Intent(context,MyInvitationActivity.class));
+                    break;
+                case R.id.my:
+                    intent=new Intent(context,InfomationActivity.class);
+                    intent.putExtra("userName",user.getUser_name());
+                    intent.putExtra("userPhone",user.getUser_phone());
+                    startActivity(intent);
                     break;
             }
         }

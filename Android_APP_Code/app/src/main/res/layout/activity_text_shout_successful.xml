@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/c11"
+    tools:context="com.example.worrygroceryshop.activity.TextShoutSuccessfulActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="让山谷吸收掉你的负能量"
+            android:textAlignment="center"
+            android:textColor="@color/btn_pressed_green_solid"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="发泄之后"
+            android:textAlignment="center"
+            android:textColor="@color/btn_pressed_green_solid"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="平静心情"
+            android:textAlignment="center"
+            android:textColor="@color/btn_pressed_green_solid"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="试着好好解决烦恼"
+            android:textAlignment="center"
+            android:textColor="@color/btn_pressed_green_solid"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="学会向前看"
+            android:textAlignment="center"
+            android:textColor="@color/btn_pressed_green_solid"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/smile" />
+</LinearLayout>

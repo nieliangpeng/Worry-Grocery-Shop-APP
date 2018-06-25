@@ -9,7 +9,6 @@
 		<property name="video_fileName" />
 		<property name="video_resource" />
 		<property name="video_time" />
-		<property name="good_num" />
 	
 	</class>
 </hibernate-mapping>

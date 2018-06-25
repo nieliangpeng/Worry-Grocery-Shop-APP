@@ -25,10 +25,10 @@
             android:layout_height="50dp"
             android:text="我的信件"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="210dp"
+            android:layout_marginLeft="180dp"
             android:gravity="center"
             android:textAlignment="center"
-            android:textColor="#33ff33"
+            android:textColor="#DDAFAF"
             android:textStyle="bold"
             android:textSize="20sp" />
         <ImageView
@@ -55,7 +55,7 @@
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
-        android:textColor="#33ff33"
+        android:textColor="#DDAFAF"
         android:textStyle="bold"
         android:textSize="20sp" />
     <ImageView

@@ -3,6 +3,7 @@ package com.example.worrygroceryshop.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.worrygroceryshop.R;
 import com.hyphenate.EMContactListener;
@@ -51,22 +52,32 @@ public class PenFriendActivity extends AppCompatActivity {
 
             @Override
             public void onContactDeleted(String s) {
-
+                contactListFragment.setContactsMap(getContact());
+                contactListFragment.refresh();
             }
 
             @Override
             public void onContactInvited(String s, String s1) {
-
+                try {
+                    Log.i("收到好友请求","true");
+                    EMClient.getInstance().contactManager().acceptInvitation(s);
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+                contactListFragment.setContactsMap(getContact());
+                contactListFragment.refresh();
             }
 
             @Override
             public void onFriendRequestAccepted(String s) {
-
+                contactListFragment.setContactsMap(getContact());
+                contactListFragment.refresh();
             }
 
             @Override
             public void onFriendRequestDeclined(String s) {
-
+                contactListFragment.setContactsMap(getContact());
+                contactListFragment.refresh();
             }
         });
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black_deep">#FF000000</color>
-    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="black_deep">#000000</color>
+    <color name="bottom_bar_normal_bg">#2d2f31</color>
     <color name="bottom_text_color_normal">#ffffff</color>
     <color name="btn_answer_normal">#2dafa3</color>
     <color name="btn_answer_pressed">#4ebcd3</color>
@@ -11,12 +11,12 @@
     <color name="btn_gray_pressed">#666667</color>
     <color name="btn_gray_pressed_status">#b5b5b6</color>
     <color name="btn_green_noraml">#68C270</color>
-    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_green_pressed">#6fcd78</color>
     <color name="btn_login_normal">#00acff</color>
     <color name="btn_login_pressed">#46678d</color>
     <color name="btn_logout_normal">#d33f3f</color>
     <color name="btn_logout_pressed">#DA5A4D</color>
-    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="btn_pressed_green_solid">#e17b3c</color>
     <color name="btn_register_normal">#ffffff</color>
     <color name="btn_register_pressed">#00acff</color>
     <color name="btn_white_normal">#f7f8f8</color>
@@ -36,15 +36,15 @@
     <color name="grid_state_pressed">#1Affffff</color>
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="holo_green_light">#ff99cc00</color>
-    <color name="holo_orange_light">#ffffbb33</color>
-    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_orange_light">#ffbb33</color>
+    <color name="holo_red_light">#ff4444</color>
     <color name="list_itease_primary_color">#000</color>
     <color name="list_itease_secondary_color">#888888</color>
     <color name="orange">#FFA500</color>
     <color name="recall_black">#61212121</color>
     <color name="recall_black_38">#89ffffff</color>
     <color name="recall_white_54">#89ffffff</color>
-    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="top_bar_normal_bg">#e1ddafaf</color>
     <color name="voip_interface_text_color">#bababa</color>
     <declare-styleable name="EaseChatExtendMenu"><attr format="integer" name="numColumns"/></declare-styleable>
     <declare-styleable name="EaseChatMessageList"><attr format="reference" name="msgListMyBubbleBackground"/><attr format="reference" name="msgListOtherBubbleBackground"/><attr format="boolean" name="msgListShowUserAvatar"/><attr format="boolean" name="msgListShowUserNick"/></declare-styleable>
@@ -71,7 +71,7 @@
     <dimen name="field_margin_right">5dp</dimen>
     <dimen name="field_textsize">14sp</dimen>
     <dimen name="height_row_weixin">59dp</dimen>
-    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="height_top_bar">50dp</dimen>
     <dimen name="image_thumbnail_size">100dp</dimen>
     <dimen name="image_thumbnail_spacing">1dp</dimen>
     <dimen name="margin_chat_activity">5dp</dimen>

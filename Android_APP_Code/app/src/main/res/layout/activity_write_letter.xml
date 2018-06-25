@@ -11,7 +11,7 @@
         android:id="@+id/titele"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#7fddafaf">
+        android:background="#DDAFAF">
         <ImageView
             android:id="@+id/back"
             android:layout_width="20dp"
@@ -46,7 +46,7 @@
         android:id="@+id/from"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@mipmap/letter_bkgd">
+        android:background="#fff">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="来自：#"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="17dp"
                 android:textStyle="bold" />
             <!--设置用户名-->
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="一颗豆Zi"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="17dp"
                 android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="#"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black_deep"
                 android:textSize="17dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -91,17 +91,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="518dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@mipmap/letter_bkgd">
+        android:background="@mipmap/ss11">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="518dp">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
 
                 <EditText
                     android:id="@+id/lettercontent"
@@ -112,7 +114,7 @@
                     android:hint="开始你的写信之旅吧！！！"
                     android:inputType="textMultiLine"
                     android:maxLines="30"
-                    android:minLines="19"
+                    android:minLines="22"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
@@ -120,10 +122,10 @@
                     android:id="@+id/letter_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"
-                    android:layout_marginLeft="190dp"
+
+                    android:layout_marginLeft="230dp"
                     android:text="2018-5-23 16:24:41"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black_deep"
                     android:textSize="18dp"
                     android:textStyle="bold" />
             </LinearLayout>

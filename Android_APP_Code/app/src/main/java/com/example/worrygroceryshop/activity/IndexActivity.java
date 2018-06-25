@@ -40,9 +40,15 @@ public class IndexActivity extends AppCompatActivity {
             int go=i.getIntExtra("go",0);
             if(go==4){
                 myFragmentTabhost.setCurrentTab(4);
+                changeTabBackGround();
+            }
+            if(go==1){
+                myFragmentTabhost.setCurrentTab(1);
+                changeTabBackGround();
             }
         }else{
             myFragmentTabhost.setCurrentTab(0);
+            changeTabBackGround();
         }
 
         myFragmentTabhost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {

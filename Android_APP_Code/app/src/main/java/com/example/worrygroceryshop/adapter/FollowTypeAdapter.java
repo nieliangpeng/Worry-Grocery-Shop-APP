@@ -27,11 +27,11 @@ import java.util.Set;
 
 public class FollowTypeAdapter extends BaseAdapter {
     private Context context;
-    private List<FollowType> followTypeList;
+    private List<InvtType> followTypeList;
     private int item_layout_id;
     private int[] ids;
 
-    public FollowTypeAdapter(Context context, List<FollowType> followTypeList, int item_layout_id, int[] ids) {
+    public FollowTypeAdapter(Context context, List<InvtType> followTypeList, int item_layout_id, int[] ids) {
         this.context = context;
         this.followTypeList = followTypeList;
         this.item_layout_id = item_layout_id;
@@ -67,11 +67,10 @@ public class FollowTypeAdapter extends BaseAdapter {
         }else {
             viewHoder = (ViewHoder)convertView.getTag();
         }
-        final FollowType followType = followTypeList.get(position);
-        final InvtType invtType=followType.getInvtType();
+        final InvtType invtType = followTypeList.get(position);
         //加载图片
         Glide.with(context)
-                .load(MyPathUrl.MyURL+"getTypeImage.action?type_id="+invtType.getType_id())
+                .load(MyPathUrl.MyURL+"picture.action?type_id="+invtType.getType_id())
                 .placeholder(R.mipmap.placeholder)
                 .error(R.mipmap.error)
                 .fallback(R.mipmap.ic_launcher)
@@ -83,7 +82,7 @@ public class FollowTypeAdapter extends BaseAdapter {
 
         return convertView;
     }
-    public void refresh(List<FollowType> f){
+    public void refresh(List<InvtType> f){
         followTypeList=f;
         notifyDataSetChanged();
     }

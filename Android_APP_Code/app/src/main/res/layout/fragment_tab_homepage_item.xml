@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/tabname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐"
+        android:textColor="@color/bottom_text_color_normal"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

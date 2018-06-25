@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.worrygroceryshop.activity.PostActivity">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DDAFAF">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="发布帖子"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="#"
+                android:textColor="@color/btn_pressed_green_solid"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/typename"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="日常发帖"
+                android:textColor="@color/btn_pressed_green_solid"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="#"
+                android:textColor="@color/btn_pressed_green_solid"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape5">
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="内容"
+            android:inputType="textMultiLine"
+            android:minLines="10"
+            android:scrollbars="vertical"
+            android:textColor="@color/black_deep"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageButton
+                android:id="@+id/photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@mipmap/camera1"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+        />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <CheckBox
+            android:id="@+id/xianshi"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/gongkai"
+            android:layout_marginTop="10dp"
+            android:text="显示昵称"
+            android:textColor="#DDAFAF" />
+
+        <CheckBox
+            android:id="@+id/buxianshi"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="53dp"
+            android:layout_marginTop="13dp"
+            android:text="匿名"
+            android:textColor="#DDAFAF" />
+
+        <CheckBox
+            android:id="@+id/gongkai"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginStart="29dp"
+            android:text="允许公开评论"
+            android:textColor="#DDAFAF" />
+
+        <CheckBox
+            android:id="@+id/bugongkai"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@+id/gongkai"
+            android:layout_alignBottom="@+id/gongkai"
+            android:layout_alignStart="@+id/buxianshi"
+            android:text="不允许公开评论"
+            android:textColor="#DDAFAF" />
+    </RelativeLayout>
+</LinearLayout>

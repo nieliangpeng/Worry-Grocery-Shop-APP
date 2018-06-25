@@ -11,4 +11,9 @@
         <item name="android:colorControlActivated">@color/colorAccent</item>
         <item name="android:colorControlNormal">#fff</item>
     </style>
+    <!-- CustomCheckBox theme -->
+    <style name="CustomCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
 </resources>

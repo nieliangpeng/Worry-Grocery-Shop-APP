@@ -6,7 +6,7 @@ public class Collect {
 	private int collect_id;
 	private User user;
 	private Invitation invitation;
-	private Date collect_time;
+	private String collect_time;
 	
 	public int getCollect_id() {
 		return collect_id;
@@ -26,11 +26,16 @@ public class Collect {
 	public void setInvitation(Invitation invitation) {
 		this.invitation = invitation;
 	}
-	public Date getCollect_time() {
+	public String getCollect_time() {
 		return collect_time;
 	}
-	public void setCollect_time(Date collect_time) {
+	public void setCollect_time(String collect_time) {
 		this.collect_time = collect_time;
+	}
+	@Override
+	public String toString() {
+		return "Collect [collect_id=" + collect_id + ", user=" + user + ", invitation=" + invitation + ", collect_time="
+				+ collect_time + "]";
 	}
 	
 }

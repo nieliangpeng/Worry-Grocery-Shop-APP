@@ -11,7 +11,7 @@
         android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@mipmap/backg">
+        android:background="@mipmap/pagebg1">
         <!--头部返回-->
         <RelativeLayout
             android:id="@+id/parent1"
@@ -24,7 +24,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="5dp"
-                android:src="@mipmap/backb" />
+                android:src="@mipmap/back" />
             <!--个人键-->
             <ImageView
                 android:id="@+id/my"
@@ -34,7 +34,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="5dp"
-                android:src="@mipmap/my_b" />
+                android:src="@mipmap/my" />
         </RelativeLayout><!--头部返回-->
         <!--个人信息-->
         <RelativeLayout
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="小闫"
-                android:textColor="#0000FF"
+                android:textColor="#fff"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -69,16 +69,17 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/zuanshi"
                 android:text="普通用户"
-                android:textColor="#0000FF"
+                android:textColor="@color/btn_pressed_green_solid"
                 android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_below="@+id/user_name"
+                android:layout_centerHorizontal="true"
                 android:text="18732156342"
-                android:textColor="#0000FF"
+                android:textColor="#fff"
                 android:textSize="14sp" />
         </RelativeLayout><!--个人信息-->
         <!--签名-->
@@ -95,7 +96,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentBottom="true"
-                android:src="@mipmap/writeb" />
+                android:src="@mipmap/write" />
 
             <TextView
                 android:id="@+id/desc"
@@ -107,7 +108,7 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="这家伙很懒，没留下足迹。"
-                android:textColor="#0000FF" />
+                android:textColor="#DDAFAF" />
         </RelativeLayout><!--签名-->
         <!--头像-->
         <de.hdodenhof.circleimageview.CircleImageView
@@ -115,19 +116,19 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignBottom="@+id/mySign"
-            android:layout_marginBottom="11dp"
-            android:layout_marginEnd="23dp"
-            android:layout_toStartOf="@+id/parent3"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginStart="22dp"
             android:src="@mipmap/pic"
             app:civ_border_color="#a17979"
-            app:civ_border_width="2dp"/>
+            app:civ_border_width="2dp" />
     </RelativeLayout><!--上半部-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="310dp">
+        android:layout_height="370dp">
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="310dp"
+            android:layout_height="wrap_content"
             android:scrollbars="none">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -146,6 +147,7 @@
                         android:layout_alignBottom="@+id/howmuch"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
                         android:src="@mipmap/love"
                         android:id="@+id/imageView2" />
 
@@ -156,7 +158,7 @@
                         android:layout_alignBottom="@+id/imageView"
                         android:layout_toEndOf="@+id/howmuch"
                         android:text="人关注了ta"
-                        android:textColor="#000000"
+                        android:textColor="#DDAFAF"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                     <ImageView
@@ -165,7 +167,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="17dp"
-                        android:src="@mipmap/jianyou"
+                        android:src="@mipmap/back_g"
                         android:id="@+id/imageView" />
 
                     <TextView
@@ -177,14 +179,14 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/imageView2"
                         android:text="142"
-                        android:textColor="#000000"
+                        android:textColor="#DDAFAF"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </RelativeLayout><!--关注他的人-->
                 <!--他的帖子-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/shape5">
                     <!--他的帖子-->
                     <RelativeLayout
@@ -206,7 +208,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:text="他的帖子"
-                            android:textColor="#000000"
+                            android:textColor="#DDAFAF"
                             android:textStyle="bold"
                             android:id="@+id/textView" />
 
@@ -221,18 +223,19 @@
                     </RelativeLayout>
                     <!--内容-->
                     <ListView
-                        android:id="@+id/list"
+                        android:id="@+id/listview"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/topic"
                         android:scrollbars="none">
+
                     </ListView>
                 </RelativeLayout><!--他的帖子-->
                 <!--关注话题-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/shape5">
                     <!--话题-->
                     <RelativeLayout
@@ -254,7 +257,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:text="关注话题"
-                            android:textColor="#000000"
+                            android:textColor="#DDAFAF"
                             android:textStyle="bold"
                             android:id="@+id/textView1" />
 
@@ -276,7 +279,9 @@
                         android:layout_below="@+id/topic1"
                         android:horizontalSpacing="1dp"
                         android:scrollbars="horizontal"
-                        android:numColumns="5">
+                        android:numColumns="4"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp">
                     </GridView>
                 </RelativeLayout><!--关注话题-->
             </LinearLayout>
@@ -285,37 +290,36 @@
     <!--下部底框-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="bottom"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView1">
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
 
         <TextView
-            android:layout_width="190dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
 
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
 
-            android:background="#7fd11e5a"
+            android:background="#DDAFAF"
             android:text="关注"
             android:gravity="center"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/addPenFriend"
-            android:layout_width="190dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
 
             android:layout_alignParentEnd="true"
-            android:background="#7f18f2c1"
+            android:background="@color/btn_pressed_green_solid"
             android:gravity="center"
             android:text="加笔友"
-            android:textColor="#000000"
-            android:textSize="25sp"
+            android:textColor="#fff"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </RelativeLayout>
 </LinearLayout>

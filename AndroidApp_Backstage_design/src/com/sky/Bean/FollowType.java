@@ -23,6 +23,10 @@ public class FollowType {
 	public void setInvtType(InvtType invtType) {
 		this.invtType = invtType;
 	}
+	@Override
+	public String toString() {
+		return "FollowType [FT_id=" + FT_id + ", user=" + user + ", invtType=" + invtType + "]";
+	}
 	
 	
 	

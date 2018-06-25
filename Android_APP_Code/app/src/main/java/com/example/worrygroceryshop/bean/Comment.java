@@ -7,16 +7,44 @@ import java.util.Set;
 
 public class Comment {
 	private int comment_id;
-	private User user;
+
 	private Invitation invitation;
 	private String comment_content;
 	private String comment_state;
 	private String comment_isRealNam;
 	private String comment_image;
-	private Date comment_time;
+	private String comment_time;
 	private int comment_praiseNum;
 	private Set replySet=new HashSet<Reply>();
-	
+	//
+	private int user_id;
+	private String user_phone;
+	private String user_name;
+
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public String getUser_phone() {
+		return user_phone;
+	}
+
+	public void setUser_phone(String user_phone) {
+		this.user_phone = user_phone;
+	}
+
+	public String getUser_name() {
+		return user_name;
+	}
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
 	public Set getReplySet() {
 		return replySet;
 	}
@@ -28,12 +56,6 @@ public class Comment {
 	}
 	public void setComment_id(int comment_id) {
 		this.comment_id = comment_id;
-	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
 	}
 	public Invitation getInvitation() {
 		return invitation;
@@ -65,12 +87,15 @@ public class Comment {
 	public void setComment_image(String comment_image) {
 		this.comment_image = comment_image;
 	}
-	public Date getComment_time() {
+
+	public String getComment_time() {
 		return comment_time;
 	}
-	public void setComment_time(Date comment_time) {
+
+	public void setComment_time(String comment_time) {
 		this.comment_time = comment_time;
 	}
+
 	public int getComment_praiseNum() {
 		return comment_praiseNum;
 	}

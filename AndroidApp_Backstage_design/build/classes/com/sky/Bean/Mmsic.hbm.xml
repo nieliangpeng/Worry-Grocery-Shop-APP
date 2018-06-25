@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sky.Bean">
+	<class name="Mmsic" table="music">
+		<id name="music_id" column="music_id">
+			<generator class="increment" />
+		</id>
+		<property name="music_name" />
+		<property name="music_auth" />
+		<property name="music_url" />
+		<property name="music_img" />
+		
+	
+	</class>
+</hibernate-mapping>

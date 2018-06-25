@@ -37,12 +37,12 @@
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>*.action</url-pattern>
   </servlet-mapping>
-  <error-page>
+ <!-- <error-page>
     <error-code>500</error-code>
     <location>/common/UserError.jsp</location>
   </error-page>
   <error-page>
     <error-code>404</error-code>
     <location>/common/UserError.jsp</location>
-  </error-page>
+  </error-page>  -->
 </web-app>

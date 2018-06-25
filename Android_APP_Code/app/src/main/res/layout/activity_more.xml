@@ -23,7 +23,7 @@
             android:id="@+id/image1"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:background="@mipmap/teacher" />
+            android:background="@mipmap/g4" />
 
         <TextView
             android:id="@+id/text1"
@@ -50,7 +50,7 @@
             android:id="@+id/image2"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:background="@mipmap/shut" />
+            android:background="@mipmap/g8" />
 
         <TextView
             android:id="@+id/text2"
@@ -65,7 +65,7 @@
     </RelativeLayout>
     <!--每日一言-->
     <RelativeLayout
-        android:id="@+id/worde"
+        android:id="@+id/music"
         android:layout_width="120dp"
         android:layout_height="150dp"
         android:layout_alignStart="@+id/bigteacher"
@@ -74,18 +74,18 @@
         android:background="#FFFFFF">
 
         <ImageView
-            android:id="@+id/image3"
+            android:id="@+id/musicimg"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:background="@mipmap/book" />
+            android:background="@mipmap/g1" />
 
         <TextView
-            android:id="@+id/text3"
+            android:id="@+id/musictext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="每日一言"
+            android:text="音乐"
             android:textColor="@color/btn_gray_pressed_status"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -96,14 +96,14 @@
         android:layout_width="120dp"
         android:layout_height="150dp"
         android:layout_alignStart="@+id/shut"
-        android:layout_alignTop="@+id/worde"
+        android:layout_alignTop="@+id/music"
         android:background="#FFFFFF">
 
         <ImageView
             android:id="@+id/image4"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:background="@mipmap/tree" />
+            android:background="@mipmap/aaaaaa" />
 
         <TextView
             android:id="@+id/text4"
@@ -116,6 +116,7 @@
             android:textSize="14sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

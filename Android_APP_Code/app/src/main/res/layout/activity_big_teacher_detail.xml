@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.worrygroceryshop.activity.BigTeacherDetailActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@mipmap/header1" />
+
+    <ImageView
+        android:id="@+id/chat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/xiaoxi" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="274dp"
+        android:text="随风行走"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/smssdk_black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:id="@+id/name" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:text="心理咨询师，情感分析师，处理人际关系，抑郁，自卑，情感挽回，心理咨询师，情感分析师，处理人际关系，抑郁，自卑，情感挽回心理咨询师，情感分析师，处理人际关系，抑郁，自卑，情感挽回心理咨询师，情感分析师，处理人际关系，抑郁，自卑，情感挽回心理咨询师，情感分析师，处理人际关系，抑郁，自卑，情感挽回心理咨询师，情感"
+        android:textColor="@color/gray_normal"
+        android:textSize="17dp"
+        android:textStyle="normal" />
+</RelativeLayout>

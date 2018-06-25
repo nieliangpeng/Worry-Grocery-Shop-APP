@@ -23,5 +23,10 @@ public class TextShout {
 	public void setTextContent(String textContent) {
 		this.textContent = textContent;
 	}
+	@Override
+	public String toString() {
+		return "TextShout [textShout_id=" + textShout_id + ", textContent=" + textContent + "]";
+	}
+	
 	
 }
